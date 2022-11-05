@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../static/assets/icon/favicon.ico" th:href="@{assets/icon/hp.ico}">
+
+  <title>Kevin's blog</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../static/assets/css/bootstrap.min.css" th:href="@{assets/css/bootstrap.min.css}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <link href="../static/assets/css/blog.css" th:href="@{assets/css/blog.css}" rel="stylesheet">
+  <link href="../static/assets/css/myCSS.css" th:href="@{assets/css/myCSS.css}" rel="stylesheet"/>
+</head>
+
+<body>
+
+<div class="container">
+  <header th:replace="~{fragments :: header}"></header>
+  <div th:replace="~{fragments :: index}"></div>
+  <!--<div th:replace="~{fragments :: basicInfoPanel}"></div>-->
+
+  <div class="row mb-2">
+    <div class="col-md-6" th:each="article:${articles}">
+      <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+        <div class="card-body d-flex flex-column align-items-start">
+          <strong class="d-inline-block mb-2" th:text="${article.articleType}">ArticleType</strong>
+          <h3 class="mb-0">
+            <a class="text-dark" th:href="@{/article(id=${article.id})}" th:text="${article.title}">Featured post</a>
+          </h3>
+          <div class="mb-1 text-muted" th:text="${article.createTime}">Nov 12</div>
+          <p class="card-text mb-auto" th:utext="${article.foreword}">
+            the article's foreword
+          </p>
+          <a th:href="@{/article(id=${article.id})}">Continue reading</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="blog-pagination">
+    <!--<a class="btn btn-outline-secondary disabled" th:unless="${pageInfo.isHasPreviousPage()}" href="javascript:void(0);">PreviousPage</a>-->
+    <a class="btn btn-outline-primary" th:if="${pageModel.hasPrevious}" href="prePage"
+      th:href="@{'/articles?articleType=' + ${articleType} + '&pageNum=' + ${pageModel.previousPage}}">PreviousPage</a>
+    <!--<a class="btn btn-outline-secondary disabled" th:unless="${pageInfo.isHasNextPage()}" href="javascript:void(0);">NextPage</a>-->
+    <a class="btn btn-outline-primary" th:if="${pageModel.hasNext}" href="nexPage"
+       th:href="@{'/articles?articleType=' + ${articleType} + '&pageNum=' + ${pageModel.nextPage}}">NextPage</a>
+  </nav>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../static/assets/js/jquery-3.3.1.min.js" th:src="@{assets/js/jquery-3.3.1.min.js}"></script>
+<script src="../static/assets/js/vendor/popper.min.js" th:src="@{assets/js/vendor/popper.min.js}"></script>
+<script src="../static/assets/js/bootstrap.min.js" th:src="@{assets/js/bootstrap.min.js}"></script>
+<script src="../static/assets/js/vendor/holder.min.js" th:src="@{assets/js/vendor/holder.min.js}"></script>
+<script src="../static/assets/js/myJS.js" th:src="@{assets/js/myJS.js}"></script>
+<script>
+    Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../static/assets/icon/favicon.ico" th:href="@{assets/icon/hp.ico}">
+
+  <title>Sign In</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../static/assets/css/bootstrap.min.css" th:href="@{assets/css/bootstrap.min.css}" rel="stylesheet" type="text/css">
+  <link href="../static/assets/css/signinCss.css" th:href="@{assets/css/signinCss.css}" rel="stylesheet">
+</head>
+
+<body class="text-center">
+<form class="form-signin" action="/toLogin" method="post">
+  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+  <p class="text-danger" th:if="${param.logout}">You have been logged out.</p>
+  <label for="username" class="sr-only">Username</label>
+  <input type="text" id="username" name="username" class="form-control" placeholder="" required autofocus>
+  <label for="password" class="sr-only">Password</label>
+  <input type="password" id="password" name="password" class="form-control" placeholder="" required>
+  <p class="text-danger" th:if="${param.error}">Invalid username and password.</p>
+  <div class="mb-3">
+    <a class="text-muted" href="/index">skip</a>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit" id="btnLogin">Sign in</button>
+</form>
+</body>
+
+<script src="../static/assets/js/jquery-3.3.1.min.js" th:src="@{assets/js/jquery-3.3.1.min.js}"></script>
+<script>
+  // $("#btnLogin").on('click', function () {
+  //   console.log("in login html");
+  //   $.ajax({
+  //     url: "/login",
+  //     type: "post",
+  //     data: {
+  //       username: $("#username").val(),
+  //       password: $("#password").val()
+  //     },
+  //     success: function (data) {
+  //       console.log(data);
+  //       if (data == '1')
+  //         window.location.href = "/index";
+  //       else
+  //         alert("wrong!");
+  //     }
+  //   });
+  //   return false;
+  // });
+</script>
+<script src="../static/assets/js/myJS.js" th:src="@{assets/js/myJS.js}"></script>
+</html>

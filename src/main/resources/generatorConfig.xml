@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+    PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+    "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <classPathEntry location="/Users/xiaoxiang/.m2/repository/mysql/mysql-connector-java/8.0.18/mysql-connector-java-8.0.18.jar" />
+
+  <context id="DB2Tables" targetRuntime="MyBatis3" defaultModelType="flat">
+    <!-- myBatis 自带的分页插件 -->
+    <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+    
+    <commentGenerator>
+      <property name="suppressDate" value="true"/>
+      <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+      <property name="suppressAllComments" value="true"/>
+    </commentGenerator>
+
+    <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                    connectionURL="jdbc:mysql://localhost:3306/myblog"
+                    userId="root"
+                    password="root">
+      <property name="nullCatalogMeansCurrent" value="true" />
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="useJSR310Types" value="true" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="org.kevin.demo0212.model" targetProject="src/main/java">
+      <property name="rootClass" value="org.kevin.demo0212.model.BaseModel"/>
+      <property name="enableSubPackages" value="true"/>
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+
+    <sqlMapGenerator targetPackage="mapper"  targetProject="src/main/resources">
+    </sqlMapGenerator>
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="org.kevin.demo0212.mapper"  targetProject="src/main/java">
+      <property name="enableSubPackages" value="true" />
+    </javaClientGenerator>
+
+    <table tableName="sa_admin" domainObjectName="SaAdmin">
+    </table>
+    <table tableName="sa_contact" domainObjectName="SaContact">
+    </table>
+
+  </context>
+</generatorConfiguration>

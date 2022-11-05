@@ -1,0 +1,548 @@
+2020-11-04 00:12:07.019 [main] INFO  org.kevin.demo0212.Demo0212Application - Starting Demo0212Application on kevinzdeMacBook-Pro.local with PID 66326 (/Users/xiaoxiang/IdeaProjects/demo0212/target/classes started by xiaoxiang in /Users/xiaoxiang/IdeaProjects/demo0212)
+2020-11-04 00:12:07.054 [main] INFO  org.kevin.demo0212.Demo0212Application - No active profile set, falling back to default profiles: default
+2020-11-04 00:12:08.295 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:12:08.299 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-04 00:12:08.375 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-04 00:12:08.376 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61ms. Found 0 JDBC repository interfaces.
+2020-11-04 00:12:08.436 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:12:08.436 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-04 00:12:08.673 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 236ms. Found 1 MongoDB repository interfaces.
+2020-11-04 00:12:08.695 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:12:08.697 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-04 00:12:08.728 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-11-04 00:12:08.728 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020-11-04 00:12:09.459 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-04 00:12:10.020 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-11-04 00:12:10.034 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-04 00:12:10.035 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-04 00:12:10.036 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-11-04 00:12:10.138 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-04 00:12:10.138 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2981 ms
+2020-11-04 00:12:11.488 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-11-04 00:12:11.742 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-11-04 00:12:11.753 [main] DEBUG o.k.d.mapper.ArticleTypeMapper.selectByExample - ==>  Preparing: select id, type, value, note, delete_flag, create_time from article_type 
+2020-11-04 00:12:11.788 [main] DEBUG o.k.d.mapper.ArticleTypeMapper.selectByExample - ==> Parameters: 
+2020-11-04 00:12:11.848 [main] DEBUG o.k.d.mapper.ArticleTypeMapper.selectByExample - <==      Total: 4
+2020-11-04 00:12:11.874 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:12:11.876 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==> Parameters: 1(Integer)
+2020-11-04 00:12:11.881 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - <==      Total: 1
+2020-11-04 00:12:11.883 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:12:11.884 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==> Parameters: 2(Integer)
+2020-11-04 00:12:11.889 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - <==      Total: 1
+2020-11-04 00:12:11.891 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:12:11.892 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==> Parameters: 3(Integer)
+2020-11-04 00:12:11.896 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - <==      Total: 1
+2020-11-04 00:12:12.221 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2020-11-04 00:12:12.224 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2020-11-04 00:12:13.233 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-11-04 00:12:13.376 [cluster-ClusterId{value='5fa1815d7e8f4d28b37bba54', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:2}] to localhost:27017
+2020-11-04 00:12:13.394 [cluster-ClusterId{value='5fa1815d7e8f4d28b37bba54', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 3]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=13201925}
+2020-11-04 00:12:14.331 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46a0ef6f, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d2be319, org.springframework.security.web.header.HeaderWriterFilter@11577ab8, org.springframework.security.web.authentication.logout.LogoutFilter@5c1687d1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2ae08750, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2dfd157b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ca7619f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6afced93, org.springframework.security.web.session.SessionManagementFilter@5759edff, org.springframework.security.web.access.ExceptionTranslationFilter@29d563bd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3ee200ae]
+2020-11-04 00:12:14.659 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-04 00:12:14.894 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-11-04 00:12:15.264 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-11-04 00:12:15.289 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-04 00:12:15.292 [main] INFO  org.kevin.demo0212.Demo0212Application - Started Demo0212Application in 9.045 seconds (JVM running for 10.371)
+2020-11-04 00:12:19.674 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-04 00:12:19.675 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-04 00:12:19.684 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2020-11-04 00:12:19.748 [http-nio-8080-exec-1] DEBUG o.k.d.m.A.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, title, media_url, article_type, note, delete_flag, create_time, update_time , foreword, content from article order by create_time DESC 
+2020-11-04 00:12:19.749 [http-nio-8080-exec-1] DEBUG o.k.d.m.A.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:12:25.435 [http-nio-8080-exec-10] DEBUG o.k.demo0212.mapper.BlogUserMapper.selectByExample - ==>  Preparing: select id, username, password, create_time, status from blog_user WHERE ( username = ? ) 
+2020-11-04 00:12:25.435 [http-nio-8080-exec-10] DEBUG o.k.demo0212.mapper.BlogUserMapper.selectByExample - ==> Parameters: kevin(String)
+2020-11-04 00:12:25.437 [http-nio-8080-exec-10] DEBUG o.k.demo0212.mapper.BlogUserMapper.selectByExample - <==      Total: 1
+2020-11-04 00:12:25.538 [http-nio-8080-exec-8] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:12:25.538 [http-nio-8080-exec-8] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:12:25.547 [http-nio-8080-exec-8] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:12:25.548 [http-nio-8080-exec-8] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:12:25.551 [http-nio-8080-exec-8] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:12:34.415 [http-nio-8080-exec-3] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:12:34.419 [http-nio-8080-exec-3] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==> Parameters: b9d299f221c94dd8b14b7c25c1a93f59(String), 2020-11-04T00:12:34.415(LocalDateTime), helosakdjhasdf(String)
+2020-11-04 00:12:34.436 [http-nio-8080-exec-3] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - <==    Updates: 1
+2020-11-04 00:12:34.562 [http-nio-8080-exec-1] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:12:34.563 [http-nio-8080-exec-1] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:12:34.570 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:12:34.570 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:12:34.571 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:16:47.811 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-04 00:16:47.950 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-11-04 00:16:47.955 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-11-04 00:17:25.103 [main] INFO  org.kevin.demo0212.Demo0212Application - Starting Demo0212Application on kevinzdeMacBook-Pro.local with PID 66369 (/Users/xiaoxiang/IdeaProjects/demo0212/target/classes started by xiaoxiang in /Users/xiaoxiang/IdeaProjects/demo0212)
+2020-11-04 00:17:25.107 [main] INFO  org.kevin.demo0212.Demo0212Application - No active profile set, falling back to default profiles: default
+2020-11-04 00:17:26.189 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:17:26.191 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-04 00:17:26.310 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-04 00:17:26.314 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 111ms. Found 0 JDBC repository interfaces.
+2020-11-04 00:17:26.377 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:17:26.377 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-04 00:17:26.563 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 185ms. Found 1 MongoDB repository interfaces.
+2020-11-04 00:17:26.580 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:17:26.582 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-04 00:17:26.599 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-11-04 00:17:26.599 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2020-11-04 00:17:27.288 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-04 00:17:28.087 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-11-04 00:17:28.101 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-04 00:17:28.102 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-04 00:17:28.103 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-11-04 00:17:28.189 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-04 00:17:28.189 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2973 ms
+2020-11-04 00:17:29.241 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-11-04 00:17:29.493 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-11-04 00:17:29.502 [main] DEBUG o.k.d.mapper.ArticleTypeMapper.selectByExample - ==>  Preparing: select id, type, value, note, delete_flag, create_time from article_type 
+2020-11-04 00:17:29.535 [main] DEBUG o.k.d.mapper.ArticleTypeMapper.selectByExample - ==> Parameters: 
+2020-11-04 00:17:29.581 [main] DEBUG o.k.d.mapper.ArticleTypeMapper.selectByExample - <==      Total: 4
+2020-11-04 00:17:29.611 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:17:29.612 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==> Parameters: 1(Integer)
+2020-11-04 00:17:29.614 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - <==      Total: 1
+2020-11-04 00:17:29.615 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:17:29.616 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==> Parameters: 2(Integer)
+2020-11-04 00:17:29.618 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - <==      Total: 1
+2020-11-04 00:17:29.619 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:17:29.619 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==> Parameters: 3(Integer)
+2020-11-04 00:17:29.621 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - <==      Total: 1
+2020-11-04 00:17:29.926 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2020-11-04 00:17:29.928 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2020-11-04 00:17:30.904 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-11-04 00:17:31.008 [cluster-ClusterId{value='5fa1829a425c590fe56bac1c', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:3}] to localhost:27017
+2020-11-04 00:17:31.014 [cluster-ClusterId{value='5fa1829a425c590fe56bac1c', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 3]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3347350}
+2020-11-04 00:17:31.628 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15651402, org.springframework.security.web.context.SecurityContextPersistenceFilter@53f94afe, org.springframework.security.web.header.HeaderWriterFilter@46507dda, org.springframework.security.web.authentication.logout.LogoutFilter@7e9ed4df, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@63e0057a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d4e424e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a53ac0c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c194652, org.springframework.security.web.session.SessionManagementFilter@66f5770e, org.springframework.security.web.access.ExceptionTranslationFilter@1885905b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@582b14e2]
+2020-11-04 00:17:31.806 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-04 00:17:31.927 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-11-04 00:17:32.220 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-11-04 00:17:32.240 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-04 00:17:32.243 [main] INFO  org.kevin.demo0212.Demo0212Application - Started Demo0212Application in 7.779 seconds (JVM running for 8.698)
+2020-11-04 00:18:00.947 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-04 00:18:00.948 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-04 00:18:00.963 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2020-11-04 00:18:04.356 [http-nio-8080-exec-8] DEBUG o.k.demo0212.mapper.BlogUserMapper.selectByExample - ==>  Preparing: select id, username, password, create_time, status from blog_user WHERE ( username = ? ) 
+2020-11-04 00:18:04.357 [http-nio-8080-exec-8] DEBUG o.k.demo0212.mapper.BlogUserMapper.selectByExample - ==> Parameters: kevin(String)
+2020-11-04 00:18:04.359 [http-nio-8080-exec-8] DEBUG o.k.demo0212.mapper.BlogUserMapper.selectByExample - <==      Total: 1
+2020-11-04 00:18:04.452 [http-nio-8080-exec-9] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:18:04.453 [http-nio-8080-exec-9] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:18:04.459 [http-nio-8080-exec-9] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:18:04.460 [http-nio-8080-exec-9] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:18:04.461 [http-nio-8080-exec-9] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:18:15.189 [http-nio-8080-exec-2] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:18:15.192 [http-nio-8080-exec-2] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==> Parameters: 1c0e4c9a97f542858f5b43847e74c218(String), 2020-11-04T00:18:15.188(LocalDateTime), hello world~(String)
+2020-11-04 00:18:15.200 [http-nio-8080-exec-2] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - <==    Updates: 1
+2020-11-04 00:18:15.307 [http-nio-8080-exec-1] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:18:15.308 [http-nio-8080-exec-1] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:18:15.316 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:18:15.316 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:18:15.318 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:18:31.256 [http-nio-8080-exec-10] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:18:31.257 [http-nio-8080-exec-10] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:18:31.261 [http-nio-8080-exec-10] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:18:31.262 [http-nio-8080-exec-10] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:18:31.264 [http-nio-8080-exec-10] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:18:40.476 [http-nio-8080-exec-4] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:18:40.478 [http-nio-8080-exec-4] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==> Parameters: 42e96afe06444ac6a826516094601b55(String), 2020-11-04T00:18:40.475(LocalDateTime), 2(String)
+2020-11-04 00:18:40.486 [http-nio-8080-exec-4] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - <==    Updates: 1
+2020-11-04 00:18:40.551 [http-nio-8080-exec-7] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:18:40.552 [http-nio-8080-exec-7] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:18:40.557 [http-nio-8080-exec-7] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:18:40.558 [http-nio-8080-exec-7] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:18:40.560 [http-nio-8080-exec-7] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:18:44.640 [http-nio-8080-exec-5] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:18:44.641 [http-nio-8080-exec-5] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:18:44.647 [http-nio-8080-exec-5] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:18:44.648 [http-nio-8080-exec-5] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:18:44.650 [http-nio-8080-exec-5] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:18:54.095 [http-nio-8080-exec-10] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:18:54.096 [http-nio-8080-exec-10] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==> Parameters: 46f3f9d36b3149c984a23c7ffefd0b62(String), 2020-11-04T00:18:54.094(LocalDateTime), 122(String)
+2020-11-04 00:18:54.104 [http-nio-8080-exec-10] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - <==    Updates: 1
+2020-11-04 00:18:54.158 [http-nio-8080-exec-8] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:18:54.158 [http-nio-8080-exec-8] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:18:54.166 [http-nio-8080-exec-8] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:18:54.167 [http-nio-8080-exec-8] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:18:54.168 [http-nio-8080-exec-8] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:19:23.676 [http-nio-8080-exec-7] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:19:23.677 [http-nio-8080-exec-7] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:19:23.681 [http-nio-8080-exec-7] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:19:23.682 [http-nio-8080-exec-7] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:19:23.683 [http-nio-8080-exec-7] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:19:31.433 [http-nio-8080-exec-1] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:19:31.434 [http-nio-8080-exec-1] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==> Parameters: 7a4e25015b744de8a6b6268469194955(String), 2020-11-04T00:19:31.432(LocalDateTime), 3(String)
+2020-11-04 00:19:31.443 [http-nio-8080-exec-1] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - <==    Updates: 1
+2020-11-04 00:19:31.493 [http-nio-8080-exec-9] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:19:31.494 [http-nio-8080-exec-9] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:19:31.499 [http-nio-8080-exec-9] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:19:31.500 [http-nio-8080-exec-9] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:19:31.501 [http-nio-8080-exec-9] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:20:44.330 [http-nio-8080-exec-2] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:20:44.331 [http-nio-8080-exec-2] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==> Parameters: a93145b2ddd8427ab973d421d0f488b6(String), 2020-11-04T00:20:44.329(LocalDateTime), ffadfs(String)
+2020-11-04 00:20:44.338 [http-nio-8080-exec-2] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - <==    Updates: 1
+2020-11-04 00:20:44.381 [http-nio-8080-exec-8] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:20:44.382 [http-nio-8080-exec-8] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:20:44.386 [http-nio-8080-exec-8] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:20:44.387 [http-nio-8080-exec-8] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:20:44.388 [http-nio-8080-exec-8] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:21:31.234 [http-nio-8080-exec-1] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:21:31.235 [http-nio-8080-exec-1] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:21:31.240 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:21:31.240 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:21:31.241 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:21:41.860 [http-nio-8080-exec-10] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:21:41.861 [http-nio-8080-exec-10] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==> Parameters: 041431cf58114dbf85564cca52f414cf(String), 2020-11-04T00:21:41.859(LocalDateTime), fdsaccc(String)
+2020-11-04 00:21:41.869 [http-nio-8080-exec-10] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - <==    Updates: 1
+2020-11-04 00:21:41.914 [http-nio-8080-exec-3] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:21:41.914 [http-nio-8080-exec-3] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:21:41.920 [http-nio-8080-exec-3] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:21:41.920 [http-nio-8080-exec-3] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:21:41.922 [http-nio-8080-exec-3] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:23:27.476 [http-nio-8080-exec-4] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:23:27.477 [http-nio-8080-exec-4] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:23:27.482 [http-nio-8080-exec-4] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:23:27.483 [http-nio-8080-exec-4] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:23:27.485 [http-nio-8080-exec-4] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:23:35.604 [http-nio-8080-exec-7] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:23:35.606 [http-nio-8080-exec-7] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==> Parameters: 738513cd40cb46d88656cc26890a85e3(String), 2020-11-04T00:23:35.603(LocalDateTime), ffs(String)
+2020-11-04 00:23:35.613 [http-nio-8080-exec-7] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - <==    Updates: 1
+2020-11-04 00:23:35.657 [http-nio-8080-exec-1] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:23:35.658 [http-nio-8080-exec-1] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:23:35.662 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:23:35.662 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:23:35.663 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:25:13.061 [http-nio-8080-exec-7] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:25:13.062 [http-nio-8080-exec-7] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==> Parameters: 4ae3cfc55a5e48ffbe181c7b3434c1cb(String), 2020-11-04T00:25:13.060(LocalDateTime), hellowhord(String)
+2020-11-04 00:25:13.068 [http-nio-8080-exec-7] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - <==    Updates: 1
+2020-11-04 00:25:13.111 [http-nio-8080-exec-1] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:25:13.112 [http-nio-8080-exec-1] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:25:13.115 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:25:13.115 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:25:13.117 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:26:33.301 [http-nio-8080-exec-10] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:26:33.302 [http-nio-8080-exec-10] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==> Parameters: fb53cbe9234b4d179a336059c763f40f(String), 2020-11-04T00:26:33.301(LocalDateTime), 大声点(String)
+2020-11-04 00:26:33.306 [http-nio-8080-exec-10] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - <==    Updates: 1
+2020-11-04 00:26:33.399 [http-nio-8080-exec-4] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:26:33.400 [http-nio-8080-exec-4] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:26:33.405 [http-nio-8080-exec-4] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:26:33.405 [http-nio-8080-exec-4] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:26:33.407 [http-nio-8080-exec-4] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:26:44.185 [http-nio-8080-exec-8] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:26:44.186 [http-nio-8080-exec-8] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==> Parameters: eb9ead5c1cd548be92f10c91e3f83a52(String), 2020-11-04T00:26:44.184(LocalDateTime), 时代风采(String)
+2020-11-04 00:26:44.193 [http-nio-8080-exec-8] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - <==    Updates: 1
+2020-11-04 00:26:44.240 [http-nio-8080-exec-3] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:26:44.240 [http-nio-8080-exec-3] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:26:44.245 [http-nio-8080-exec-3] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:26:44.246 [http-nio-8080-exec-3] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:26:44.248 [http-nio-8080-exec-3] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:27:03.839 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-04 00:27:03.968 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-11-04 00:27:03.973 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-11-04 00:27:09.257 [main] INFO  org.kevin.demo0212.Demo0212Application - Starting Demo0212Application on kevinzdeMacBook-Pro.local with PID 66423 (/Users/xiaoxiang/IdeaProjects/demo0212/target/classes started by xiaoxiang in /Users/xiaoxiang/IdeaProjects/demo0212)
+2020-11-04 00:27:09.277 [main] INFO  org.kevin.demo0212.Demo0212Application - No active profile set, falling back to default profiles: default
+2020-11-04 00:27:10.456 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:27:10.458 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-04 00:27:10.563 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-04 00:27:10.564 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 96ms. Found 0 JDBC repository interfaces.
+2020-11-04 00:27:10.630 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:27:10.631 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-04 00:27:10.843 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 211ms. Found 1 MongoDB repository interfaces.
+2020-11-04 00:27:10.861 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:27:10.863 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-04 00:27:10.883 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-11-04 00:27:10.884 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2020-11-04 00:27:11.479 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-04 00:27:12.005 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-11-04 00:27:12.022 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-04 00:27:12.023 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-04 00:27:12.024 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-11-04 00:27:12.123 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-04 00:27:12.123 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2723 ms
+2020-11-04 00:27:13.415 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-11-04 00:27:13.650 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-11-04 00:27:13.661 [main] DEBUG o.k.d.mapper.ArticleTypeMapper.selectByExample - ==>  Preparing: select id, type, value, note, delete_flag, create_time from article_type 
+2020-11-04 00:27:13.696 [main] DEBUG o.k.d.mapper.ArticleTypeMapper.selectByExample - ==> Parameters: 
+2020-11-04 00:27:13.735 [main] DEBUG o.k.d.mapper.ArticleTypeMapper.selectByExample - <==      Total: 4
+2020-11-04 00:27:13.759 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:27:13.760 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==> Parameters: 1(Integer)
+2020-11-04 00:27:13.764 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - <==      Total: 1
+2020-11-04 00:27:13.766 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:27:13.767 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==> Parameters: 2(Integer)
+2020-11-04 00:27:13.769 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - <==      Total: 1
+2020-11-04 00:27:13.771 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:27:13.772 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==> Parameters: 3(Integer)
+2020-11-04 00:27:13.773 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - <==      Total: 1
+2020-11-04 00:27:14.009 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2020-11-04 00:27:14.011 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2020-11-04 00:27:14.730 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-11-04 00:27:14.790 [cluster-ClusterId{value='5fa184e2d0d35504efead3c6', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:4}] to localhost:27017
+2020-11-04 00:27:14.796 [cluster-ClusterId{value='5fa184e2d0d35504efead3c6', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 3]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3531198}
+2020-11-04 00:27:15.309 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c14bbab, org.springframework.security.web.context.SecurityContextPersistenceFilter@1361e880, org.springframework.security.web.header.HeaderWriterFilter@2fce8243, org.springframework.security.web.authentication.logout.LogoutFilter@2f82e3cf, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6686507b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4bac0be5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ea1729e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72c5064f, org.springframework.security.web.session.SessionManagementFilter@37393dab, org.springframework.security.web.access.ExceptionTranslationFilter@5036a286, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5e6bbe63]
+2020-11-04 00:27:15.461 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-04 00:27:15.576 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-11-04 00:27:15.866 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-11-04 00:27:15.888 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-04 00:27:15.891 [main] INFO  org.kevin.demo0212.Demo0212Application - Started Demo0212Application in 7.36 seconds (JVM running for 8.443)
+2020-11-04 00:27:37.281 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-04 00:27:37.282 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-04 00:27:37.300 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+2020-11-04 00:27:42.169 [http-nio-8080-exec-9] DEBUG o.k.demo0212.mapper.BlogUserMapper.selectByExample - ==>  Preparing: select id, username, password, create_time, status from blog_user WHERE ( username = ? ) 
+2020-11-04 00:27:42.170 [http-nio-8080-exec-9] DEBUG o.k.demo0212.mapper.BlogUserMapper.selectByExample - ==> Parameters: kevin(String)
+2020-11-04 00:27:42.171 [http-nio-8080-exec-9] DEBUG o.k.demo0212.mapper.BlogUserMapper.selectByExample - <==      Total: 1
+2020-11-04 00:27:42.269 [http-nio-8080-exec-10] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:27:42.269 [http-nio-8080-exec-10] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:27:42.278 [http-nio-8080-exec-10] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:27:42.279 [http-nio-8080-exec-10] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:27:42.281 [http-nio-8080-exec-10] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:28:02.173 [http-nio-8080-exec-4] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:28:02.175 [http-nio-8080-exec-4] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==> Parameters: bd7029b0c0cb47678e1bcf6bab102fa4(String), 2020-11-04T00:28:02.172(LocalDateTime), 饭撒钱(String)
+2020-11-04 00:28:02.183 [http-nio-8080-exec-4] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - <==    Updates: 1
+2020-11-04 00:28:02.239 [http-nio-8080-exec-3] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:28:02.240 [http-nio-8080-exec-3] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:28:02.247 [http-nio-8080-exec-3] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:28:02.247 [http-nio-8080-exec-3] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:28:02.249 [http-nio-8080-exec-3] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:28:23.672 [http-nio-8080-exec-8] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:28:23.673 [http-nio-8080-exec-8] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==> Parameters: 4619d821bdf44f18ad35cd59537ffcb4(String), 2020-11-04T00:28:23.672(LocalDateTime), 发大财(String)
+2020-11-04 00:28:23.681 [http-nio-8080-exec-8] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - <==    Updates: 1
+2020-11-04 00:28:23.734 [http-nio-8080-exec-6] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:28:23.735 [http-nio-8080-exec-6] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:28:23.741 [http-nio-8080-exec-6] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:28:23.741 [http-nio-8080-exec-6] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:28:23.743 [http-nio-8080-exec-6] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:28:42.957 [http-nio-8080-exec-9] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:28:42.959 [http-nio-8080-exec-9] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==> Parameters: 2275902c9be14e1b9f93ab9e742ef790(String), 2020-11-04T00:28:42.957(LocalDateTime), 阿斯顿v啊的(String)
+2020-11-04 00:28:42.965 [http-nio-8080-exec-9] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - <==    Updates: 1
+2020-11-04 00:28:42.991 [http-nio-8080-exec-1] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:28:42.993 [http-nio-8080-exec-1] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:28:42.998 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:28:42.999 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:28:43.000 [http-nio-8080-exec-1] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:31:36.428 [http-nio-8080-exec-2] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:31:36.429 [http-nio-8080-exec-2] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:31:36.434 [http-nio-8080-exec-2] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:31:36.434 [http-nio-8080-exec-2] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:31:36.436 [http-nio-8080-exec-2] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:32:08.516 [http-nio-8080-exec-7] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:32:08.517 [http-nio-8080-exec-7] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:32:08.523 [http-nio-8080-exec-7] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:32:08.524 [http-nio-8080-exec-7] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:32:08.526 [http-nio-8080-exec-7] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:32:29.135 [http-nio-8080-exec-9] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:32:29.137 [http-nio-8080-exec-9] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==> Parameters: ae4abb5110ca46f4873d7f46c0c0dee9(String), 2020-11-04T00:32:29.135(LocalDateTime), wrd(String)
+2020-11-04 00:32:29.140 [http-nio-8080-exec-9] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - <==    Updates: 1
+2020-11-04 00:32:29.175 [http-nio-8080-exec-4] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:32:29.176 [http-nio-8080-exec-4] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:32:29.181 [http-nio-8080-exec-4] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:32:29.182 [http-nio-8080-exec-4] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:32:29.184 [http-nio-8080-exec-4] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:32:53.213 [http-nio-8080-exec-5] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:32:53.213 [http-nio-8080-exec-5] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:32:53.219 [http-nio-8080-exec-5] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:32:53.220 [http-nio-8080-exec-5] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:32:53.221 [http-nio-8080-exec-5] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:33:14.091 [http-nio-8080-exec-6] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:33:14.093 [http-nio-8080-exec-6] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==> Parameters: 3711dfbebef848abb38f7e2a44ec3644(String), 2020-11-04T00:33:14.091(LocalDateTime), hll(String)
+2020-11-04 00:33:14.102 [http-nio-8080-exec-6] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - <==    Updates: 1
+2020-11-04 00:33:14.140 [http-nio-8080-exec-7] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:33:14.141 [http-nio-8080-exec-7] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:33:14.147 [http-nio-8080-exec-7] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:33:14.148 [http-nio-8080-exec-7] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:33:14.149 [http-nio-8080-exec-7] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:33:16.699 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-04 00:33:16.837 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-11-04 00:33:16.843 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-11-04 00:33:55.188 [main] INFO  org.kevin.demo0212.Demo0212Application - Starting Demo0212Application on kevinzdeMacBook-Pro.local with PID 66471 (/Users/xiaoxiang/IdeaProjects/demo0212/target/classes started by xiaoxiang in /Users/xiaoxiang/IdeaProjects/demo0212)
+2020-11-04 00:33:55.192 [main] INFO  org.kevin.demo0212.Demo0212Application - No active profile set, falling back to default profiles: default
+2020-11-04 00:33:56.305 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:33:56.309 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-04 00:33:56.432 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-04 00:33:56.435 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 113ms. Found 0 JDBC repository interfaces.
+2020-11-04 00:33:56.501 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:33:56.502 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-04 00:33:56.738 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 235ms. Found 1 MongoDB repository interfaces.
+2020-11-04 00:33:56.761 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:33:56.764 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-04 00:33:56.787 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-11-04 00:33:56.788 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2020-11-04 00:33:57.437 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-04 00:33:58.040 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-11-04 00:33:58.074 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-04 00:33:58.077 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-04 00:33:58.078 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-11-04 00:33:58.215 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-04 00:33:58.216 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2961 ms
+2020-11-04 00:34:00.127 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-11-04 00:34:07.280 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-11-04 00:34:07.289 [main] DEBUG o.k.d.mapper.ArticleTypeMapper.selectByExample - ==>  Preparing: select id, type, value, note, delete_flag, create_time from article_type 
+2020-11-04 00:34:07.317 [main] DEBUG o.k.d.mapper.ArticleTypeMapper.selectByExample - ==> Parameters: 
+2020-11-04 00:34:07.610 [main] DEBUG o.k.d.mapper.ArticleTypeMapper.selectByExample - <==      Total: 4
+2020-11-04 00:34:07.625 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:34:07.626 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==> Parameters: 1(Integer)
+2020-11-04 00:34:07.857 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - <==      Total: 1
+2020-11-04 00:34:07.859 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:34:07.859 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==> Parameters: 2(Integer)
+2020-11-04 00:34:08.095 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - <==      Total: 1
+2020-11-04 00:34:08.096 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:34:08.096 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - ==> Parameters: 3(Integer)
+2020-11-04 00:34:08.320 [main] DEBUG o.k.d.mapper.AlertWallMapper.selectByExample - <==      Total: 1
+2020-11-04 00:34:08.511 [main] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2020-11-04 00:34:08.513 [main] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2020-11-04 00:34:09.239 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-11-04 00:34:09.316 [cluster-ClusterId{value='5fa18681b601412acf5a12fc', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:5}] to localhost:27017
+2020-11-04 00:34:09.322 [cluster-ClusterId{value='5fa18681b601412acf5a12fc', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 3]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3873006}
+2020-11-04 00:34:09.829 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44df834c, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b86f4cb, org.springframework.security.web.header.HeaderWriterFilter@11896124, org.springframework.security.web.authentication.logout.LogoutFilter@1a73f3d1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4f0cdd0f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4056cdb2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b5a89d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34c07ecc, org.springframework.security.web.session.SessionManagementFilter@633cad4d, org.springframework.security.web.access.ExceptionTranslationFilter@752ffce3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4feaa4b8]
+2020-11-04 00:34:09.981 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-04 00:34:10.092 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-11-04 00:34:10.417 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-11-04 00:34:10.437 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-04 00:34:10.440 [main] INFO  org.kevin.demo0212.Demo0212Application - Started Demo0212Application in 15.822 seconds (JVM running for 16.718)
+2020-11-04 00:34:13.710 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-04 00:34:13.711 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-04 00:34:13.722 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2020-11-04 00:34:20.002 [http-nio-8080-exec-8] DEBUG o.k.demo0212.mapper.BlogUserMapper.selectByExample - ==>  Preparing: select id, username, password, create_time, status from blog_user WHERE ( username = ? ) 
+2020-11-04 00:34:20.003 [http-nio-8080-exec-8] DEBUG o.k.demo0212.mapper.BlogUserMapper.selectByExample - ==> Parameters: kevin(String)
+2020-11-04 00:34:20.987 [http-nio-8080-exec-8] DEBUG o.k.demo0212.mapper.BlogUserMapper.selectByExample - <==      Total: 1
+2020-11-04 00:34:21.085 [http-nio-8080-exec-9] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:34:21.086 [http-nio-8080-exec-9] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:34:25.485 [http-nio-8080-exec-9] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:34:25.486 [http-nio-8080-exec-9] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:34:26.611 [http-nio-8080-exec-9] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:34:44.453 [http-nio-8080-exec-6] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:34:44.456 [http-nio-8080-exec-6] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - ==> Parameters: ed587870b7174389ab3d69211da5e7d7(String), 2020-11-04T00:34:42.429(LocalDateTime), 增加了一个加载层～～～(String)
+2020-11-04 00:34:44.760 [http-nio-8080-exec-6] DEBUG o.kevin.demo0212.mapper.SecretMomentMapper.insert - <==    Updates: 1
+2020-11-04 00:34:44.842 [http-nio-8080-exec-2] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:34:44.843 [http-nio-8080-exec-2] DEBUG o.k.d.m.S.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:34:51.815 [http-nio-8080-exec-2] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:34:51.816 [http-nio-8080-exec-2] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - ==> Parameters: 
+2020-11-04 00:34:52.908 [http-nio-8080-exec-2] DEBUG o.k.d.mapper.SecretMomentMapper.countByExample - <==      Total: 1
+2020-11-04 00:35:08.239 [http-nio-8080-exec-8] DEBUG o.k.d.m.A.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, title, media_url, article_type, note, delete_flag, create_time, update_time , foreword, content from article order by create_time DESC 
+2020-11-04 00:35:08.240 [http-nio-8080-exec-8] DEBUG o.k.d.m.A.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:37:12.206 [http-nio-8080-exec-2] DEBUG o.k.d.mapper.ArticleTypeMapper.selectByExample - ==>  Preparing: select id, type, value, note, delete_flag, create_time from article_type 
+2020-11-04 00:37:12.207 [http-nio-8080-exec-2] DEBUG o.k.d.mapper.ArticleTypeMapper.selectByExample - ==> Parameters: 
+2020-11-04 00:37:12.517 [http-nio-8080-exec-2] DEBUG o.k.d.mapper.ArticleTypeMapper.selectByExample - <==      Total: 4
+2020-11-04 00:37:29.107 [http-nio-8080-exec-4] DEBUG org.kevin.demo0212.mapper.ArticleMapper.insert - ==>  Preparing: insert into article (id, title, media_url, article_type, note, delete_flag, create_time, update_time, foreword, content) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2020-11-04 00:37:29.108 [http-nio-8080-exec-4] DEBUG org.kevin.demo0212.mapper.ArticleMapper.insert - ==> Parameters: 8e16e8f1d54a46a6b69793a5ba363643(String), 测试用(String), null, 0(Integer), null, false(Boolean), 2020-11-04T00:37:28.226(LocalDateTime), 2020-11-04T00:37:28.236(LocalDateTime), 写(String), 文章测试用(String)
+2020-11-04 00:37:29.397 [http-nio-8080-exec-4] DEBUG org.kevin.demo0212.mapper.ArticleMapper.insert - <==    Updates: 1
+2020-11-04 00:37:29.442 [http-nio-8080-exec-1] DEBUG o.k.d.m.A.selectByExampleWithBLOBsWithRowbounds - ==>  Preparing: select id, title, media_url, article_type, note, delete_flag, create_time, update_time , foreword, content from article order by create_time DESC 
+2020-11-04 00:37:29.442 [http-nio-8080-exec-1] DEBUG o.k.d.m.A.selectByExampleWithBLOBsWithRowbounds - ==> Parameters: 
+2020-11-04 00:37:56.389 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-04 00:37:56.527 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-11-04 00:37:56.534 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-11-04 00:37:56.589 [http-nio-8080-exec-1] WARN  o.s.jdbc.support.SQLErrorCodesFactory - Error while extracting database name - falling back to empty error codes
+org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:345)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:373)
+	at org.springframework.jdbc.support.SQLErrorCodesFactory.getErrorCodes(SQLErrorCodesFactory.java:215)
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.setDataSource(SQLErrorCodeSQLExceptionTranslator.java:137)
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.<init>(SQLErrorCodeSQLExceptionTranslator.java:100)
+	at org.mybatis.spring.MyBatisExceptionTranslator.lambda$new$0(MyBatisExceptionTranslator.java:54)
+	at org.mybatis.spring.MyBatisExceptionTranslator.initExceptionTranslator(MyBatisExceptionTranslator.java:102)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:87)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy83.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:145)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93)
+	at com.sun.proxy.$Proxy110.selectByExampleWithBLOBsWithRowbounds(Unknown Source)
+	at org.kevin.demo0212.service.impl.ArticleServiceImpl.selectByTypes(ArticleServiceImpl.java:51)
+	at org.kevin.demo0212.service.impl.ArticleServiceImpl.findList(ArticleServiceImpl.java:37)
+	at org.kevin.demo0212.service.impl.ArticleServiceImpl.findList(ArticleServiceImpl.java:32)
+	at org.kevin.demo0212.controller.IndexController.index(IndexController.java:50)
+	at org.kevin.demo0212.controller.IndexController$$FastClassBySpringCGLIB$$c1ce290d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at org.kevin.demo0212.controller.IndexController$$EnhancerBySpringCGLIB$$89b46c67.index(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:336)
+	... 111 common frames omitted
+Caused by: java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:96)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	... 112 common frames omitted

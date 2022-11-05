@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kevin.demo0212.mapper.MomentMapper">
+  <resultMap id="BaseResultMap" type="org.kevin.demo0212.model.Moment">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="statement" jdbcType="VARCHAR" property="statement" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+
+  <resultMap id="ResultMapWithPicture" type="org.kevin.demo0212.model.Moment" extends="BaseResultMap">
+    <collection property="pictures" ofType="org.kevin.demo0212.model.Picture" column="moment_id">
+      <id property="id" column="picture_id" jdbcType="VARCHAR" />
+      <result property="src" column="src" jdbcType="VARCHAR" />
+      <result property="picType" column="pic_type" jdbcType="VARCHAR" />
+    </collection>
+  </resultMap>
+
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, statement, create_time
+  </sql>
+  <select id="selectByExample" parameterType="org.kevin.demo0212.model.MomentExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from moment
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from moment
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from moment
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="org.kevin.demo0212.model.MomentExample">
+    delete from moment
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="org.kevin.demo0212.model.Moment">
+    insert into moment (id, statement, create_time
+      )
+    values (#{id,jdbcType=VARCHAR}, #{statement,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.kevin.demo0212.model.Moment">
+    insert into moment
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="statement != null">
+        statement,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="statement != null">
+        #{statement,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="org.kevin.demo0212.model.MomentExample" resultType="java.lang.Long">
+    select count(*) from moment
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update moment
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.statement != null">
+        statement = #{record.statement,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update moment
+    set id = #{record.id,jdbcType=VARCHAR},
+      statement = #{record.statement,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="org.kevin.demo0212.model.Moment">
+    update moment
+    <set>
+      <if test="statement != null">
+        statement = #{statement,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.kevin.demo0212.model.Moment">
+    update moment
+    set statement = #{statement,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByExampleWithRowbounds" parameterType="org.kevin.demo0212.model.MomentExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from moment
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+
+  <select id="findList" resultMap="ResultMapWithPicture">
+    SELECT m.id, m.statement, m.create_time,
+            p.id, p.src, p.pic_type
+    FROM moment AS m LEFT JOIN picture AS p ON m.id=p.moment_id
+    <where>
+      <if test="statement != null">
+        AND statement LIKE #{statement}
+      </if>
+      <if test="beginTime != null">
+        AND m.create_time &gt; #{beginTime}
+      </if>
+      <if test="endTime != null">
+        AND m.create_time &lt; #{endTime}
+      </if>
+    </where>
+    <if test="beginTime != null">
+      ORDER BY create_time ASC
+    </if>
+    <if test="endTime != null">
+      ORDER BY create_time DESC
+    </if>
+    LIMIT 0, #{limit}
+  </select>
+
+  <select id="count" resultType="java.lang.Long">
+    SELECT COUNT(*)
+    FROM moment LEFT JOIN picture ON moment.id=picture.moment_id
+    <where>
+      <if test="statement != null">
+        statement LIKE #{statement}
+      </if>
+    </where>
+  </select>
+
+  <select id="countPrevious" resultType="java.lang.Long">
+    SELECT COUNT(*)
+    FROM moment
+    WHERE create_time &gt; #{beginTime}
+  </select>
+
+  <select id="countNext" resultType="java.lang.Long">
+    SELECT COUNT(*)
+    FROM moment
+    WHERE create_time &lt; #{endTime}
+  </select>
+
+  <select id="countNext1" resultMap="BaseResultMap">
+    SELECT *
+    FROM moment
+    WHERE create_time &lt; #{endTime}
+    ORDER BY create_time DESC
+  </select>
+</mapper>

@@ -1,0 +1,4 @@
+2022-03-30 00:03:42.486 [SpringContextShutdownHook] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2b1503a2, started on Tue Mar 29 23:28:15 CST 2022
+2022-03-30 00:03:42.493 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-03-30 00:03:42.621 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-30 00:03:42.625 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

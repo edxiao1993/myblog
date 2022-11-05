@@ -1,0 +1,35 @@
+.ck-editor__editable {
+    min-height: 550px;
+    border-radius: .25rem;
+}
+
+@font-face {
+    font-family: "snellbt-bold";
+    src: url("../fonts/snellbt-bold.otf");
+}
+
+.mcYaHei{
+    font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+}
+
+.ownFont {modal-dialog
+    /*font-family: "Snell Roundhand";*/
+    font-family: "snellbt-bold";
+    /*font-size: 2rem;*/
+}
+
+.font15{
+    font-size: 1.5rem;
+}
+
+.font20{
+    font-size: 2rem;
+}
+
+.font10{
+    font-size: 1rem;
+}
+
+.myFont {
+    font-family: "Snell Roundhand";
+}

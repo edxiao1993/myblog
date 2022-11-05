@@ -1,0 +1,91 @@
+2021-02-28 02:33:04,991 INFO org.springframework.boot.StartupInfoLogger [main] Starting Demo0212Application on kevinzdeMacBook-Pro.local with PID 10377 (/Users/xiaoxiang/IdeaProjects/demo0212/target/classes started by xiaoxiang in /Users/xiaoxiang/IdeaProjects/demo0212)
+2021-02-28 02:33:05,029 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-02-28 02:33:05,924 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-28 02:33:05,926 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-02-28 02:33:05,989 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [main] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2021-02-28 02:33:05,990 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 56ms. Found 0 JDBC repository interfaces.
+2021-02-28 02:33:06,023 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-28 02:33:06,023 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-02-28 02:33:06,217 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 193ms. Found 1 MongoDB repository interfaces.
+2021-02-28 02:33:06,235 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-28 02:33:06,237 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-02-28 02:33:06,256 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-02-28 02:33:06,256 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2021-02-28 02:33:06,830 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-28 02:33:07,383 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2021-02-28 02:33:07,396 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2021-02-28 02:33:07,397 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-02-28 02:33:07,397 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-02-28 02:33:07,495 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-02-28 02:33:07,496 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2392 ms
+2021-02-28 02:33:08,658 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-02-28 02:33:08,894 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-02-28 02:33:08,904 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, value, note, delete_flag, create_time from article_type 
+2021-02-28 02:33:08,935 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 
+2021-02-28 02:33:08,969 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 4
+2021-02-28 02:33:08,987 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2021-02-28 02:33:08,988 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 1(Integer)
+2021-02-28 02:33:08,990 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2021-02-28 02:33:08,991 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2021-02-28 02:33:08,991 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 2(Integer)
+2021-02-28 02:33:08,993 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2021-02-28 02:33:08,994 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2021-02-28 02:33:08,994 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 3(Integer)
+2021-02-28 02:33:08,996 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2021-02-28 02:33:09,216 INFO io.lettuce.core.EpollProvider [main] Starting without optional epoll library
+2021-02-28 02:33:09,218 INFO io.lettuce.core.KqueueProvider [main] Starting without optional kqueue library
+2021-02-28 02:33:10,122 INFO com.mongodb.diagnostics.logging.SLF4JLogger [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2021-02-28 02:33:10,729 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1231f25c, org.springframework.security.web.context.SecurityContextPersistenceFilter@1ac68548, org.springframework.security.web.header.HeaderWriterFilter@1e38e8b6, org.springframework.security.web.authentication.logout.LogoutFilter@7aa1fb0e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@46c9ee28, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@761b9314, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@334d825c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ba0b95f, org.springframework.security.web.session.SessionManagementFilter@75b3ef1a, org.springframework.security.web.access.ExceptionTranslationFilter@325e03b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f8fe81e]
+2021-02-28 02:33:10,871 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-28 02:33:10,985 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2021-02-28 02:33:11,277 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2021-02-28 02:33:11,299 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-28 02:33:11,302 INFO org.springframework.boot.StartupInfoLogger [main] Started Demo0212Application in 6.9 seconds (JVM running for 8.373)
+2021-02-28 02:33:11,413 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='603a9066738a34745eb25556', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
+2021-02-28 02:33:11,418 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='603a9066738a34745eb25556', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 3]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3826193}
+2021-02-28 02:33:20,593 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-28 02:33:20,594 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-02-28 02:33:20,609 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 15 ms
+2021-02-28 02:33:20,679 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select id, title, media_url, article_type, note, delete_flag, create_time, update_time , foreword, content from article order by create_time DESC 
+2021-02-28 02:33:20,680 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2021-02-28 02:33:29,942 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==>  Preparing: select id, username, password, create_time, status from blog_user WHERE ( username = ? ) 
+2021-02-28 02:33:29,943 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==> Parameters: kevin(String)
+2021-02-28 02:33:29,944 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] <==      Total: 1
+2021-02-28 02:33:30,051 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2021-02-28 02:33:30,052 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==> Parameters: 
+2021-02-28 02:33:30,059 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==>  Preparing: select count(*) from secret_moment 
+2021-02-28 02:33:30,060 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==> Parameters: 
+2021-02-28 02:33:30,061 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] <==      Total: 1
+2021-02-28 02:34:41,399 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==>  Preparing: select id, title, media_url, article_type, note, delete_flag, create_time, update_time , foreword, content from article order by create_time DESC 
+2021-02-28 02:34:41,400 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==> Parameters: 
+2021-02-28 02:34:50,522 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==>  Preparing: select id, type, value, note, delete_flag, create_time from article_type 
+2021-02-28 02:34:50,523 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==> Parameters: 
+2021-02-28 02:34:50,525 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] <==      Total: 4
+2021-02-28 02:34:50,526 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==>  Preparing: select id, title, media_url, article_type, note, delete_flag, create_time, update_time , foreword, content from article where id = ? 
+2021-02-28 02:34:50,527 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==> Parameters: 2c95c676ca794464bf862d3302ee39f3(String)
+2021-02-28 02:34:50,529 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] <==      Total: 1
+2021-02-28 02:34:50,530 INFO org.kevin.demo0212.config.aop.AopLogAspect [http-nio-8080-exec-8] this is the @aopLogCut. and the execution time is:8
+2021-02-28 02:34:50,532 INFO org.kevin.demo0212.config.aop.AopLogAspect [http-nio-8080-exec-8] aop value:Test Annotation AOP of Spring
+2021-02-28 02:38:29,659 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] ==>  Preparing: select id, title, media_url, article_type, note, delete_flag, create_time, update_time , foreword, content from article order by create_time DESC 
+2021-02-28 02:38:29,660 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] ==> Parameters: 
+2021-02-28 02:38:42,777 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2021-02-28 02:38:42,778 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2021-02-28 02:38:42,784 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select count(*) from secret_moment 
+2021-02-28 02:38:42,786 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2021-02-28 02:38:42,787 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] <==      Total: 1
+2021-02-28 02:38:47,663 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-11] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2021-02-28 02:38:47,663 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-11] ==> Parameters: 
+2021-02-28 02:38:47,670 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-11] ==>  Preparing: select count(*) from secret_moment 
+2021-02-28 02:38:47,671 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-11] ==> Parameters: 
+2021-02-28 02:38:47,673 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-11] <==      Total: 1
+2021-02-28 02:43:05,090 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2021-02-28 02:43:05,093 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] ==> Parameters: f300682f580a49c999e610c4724fff6d(String), 2021-02-28T02:43:05.089(LocalDateTime), 其实，还是挺喜欢自己写下的那些文字的……<br/><br/>记得读高中那会每隔一小段时间去翻看之前写下的东西，就会有种莫名其妙地尴尬：我怎么写下了那么些东西啊？<br/>现在倒不怎么会了，是因为我已经停止成长了吗？想了很久要写的红楼梦的书评，没动手的很大一部分原因就是因为我觉得写下去的东西会很糟糕……时间来到现在，我已经忘了当初看红楼梦的感觉了。<br/>存在即是合理——从某种意义上来说，确实如此呢！！！所以多写点什么吧，尽管这些死了的文字不会对我的人生有任何的影响，但以类似脚印的形式，在我短暂的人生里留下印记，总归不是件坏事～<br/>好了，写代码去了。(String)
+2021-02-28 02:43:05,100 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] <==    Updates: 1
+2021-02-28 02:43:05,229 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2021-02-28 02:43:05,231 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] ==> Parameters: 
+2021-02-28 02:43:05,237 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] ==>  Preparing: select count(*) from secret_moment 
+2021-02-28 02:43:05,238 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] ==> Parameters: 
+2021-02-28 02:43:05,240 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] <==      Total: 1
+2021-02-28 03:52:44,535 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-28 03:52:44,668 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2021-02-28 03:52:44,670 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.

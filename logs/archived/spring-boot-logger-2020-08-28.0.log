@@ -1,0 +1,364 @@
+2020-08-28 21:12:31,106 INFO org.springframework.boot.StartupInfoLogger [main] Starting Demo0212Application on kevinzdeMacBook-Pro.local with PID 47130 (/Users/xiaoxiang/IdeaProjects/demo0212/target/classes started by xiaoxiang in /Users/xiaoxiang/IdeaProjects/demo0212)
+2020-08-28 21:12:31,116 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-08-28 21:12:31,924 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-28 21:12:31,926 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-08-28 21:12:31,979 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [main] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-08-28 21:12:31,980 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 47ms. Found 0 JDBC repository interfaces.
+2020-08-28 21:12:32,008 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-28 21:12:32,008 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-08-28 21:12:32,176 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 167ms. Found 1 MongoDB repository interfaces.
+2020-08-28 21:12:32,192 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-28 21:12:32,194 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-08-28 21:12:32,214 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-28 21:12:32,214 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
+2020-08-28 21:12:32,848 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-28 21:12:33,363 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-08-28 21:12:33,381 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-28 21:12:33,382 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-08-28 21:12:33,382 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-08-28 21:12:33,499 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-08-28 21:12:33,500 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2290 ms
+2020-08-28 21:12:34,709 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-08-28 21:12:56,172 WARN com.zaxxer.hikari.pool.PoolBase [main] HikariPool-1 - Default transaction isolation level detection failed (No operations allowed after connection closed.).
+2020-08-28 21:12:56,181 ERROR com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Error thrown while acquiring connection from data source
+java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.setTransactionIsolation(ConnectionImpl.java:2279)
+	at com.zaxxer.hikari.pool.PoolBase.setupConnection(PoolBase.java:409)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:554)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy83.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93)
+	at com.sun.proxy.$Proxy84.selectByExample(Unknown Source)
+	at org.kevin.demo0212.service.impl.ArticleTypeServiceImpl.findList(ArticleTypeServiceImpl.java:24)
+	at org.kevin.demo0212.config.InitializeProject.afterPropertiesSet(InitializeProject.java:41)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.kevin.demo0212.Demo0212Application.main(Demo0212Application.java:13)
+Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1259)
+	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:575)
+	at com.mysql.cj.jdbc.ConnectionImpl.setTransactionIsolation(ConnectionImpl.java:2226)
+	... 52 common frames omitted
+2020-08-28 21:12:56,182 ERROR com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Exception during pool initialization.
+java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.setTransactionIsolation(ConnectionImpl.java:2279)
+	at com.zaxxer.hikari.pool.PoolBase.setupConnection(PoolBase.java:409)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:554)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy83.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93)
+	at com.sun.proxy.$Proxy84.selectByExample(Unknown Source)
+	at org.kevin.demo0212.service.impl.ArticleTypeServiceImpl.findList(ArticleTypeServiceImpl.java:24)
+	at org.kevin.demo0212.config.InitializeProject.afterPropertiesSet(InitializeProject.java:41)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.kevin.demo0212.Demo0212Application.main(Demo0212Application.java:13)
+Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1259)
+	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:575)
+	at com.mysql.cj.jdbc.ConnectionImpl.setTransactionIsolation(ConnectionImpl.java:2226)
+	... 52 common frames omitted
+2020-08-28 21:12:56,185 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'initializeProject' defined in file [/Users/xiaoxiang/IdeaProjects/demo0212/target/classes/org/kevin/demo0212/config/InitializeProject.class]: Invocation of init method failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+### The error may exist in file [/Users/xiaoxiang/IdeaProjects/demo0212/target/classes/mapper/ArticleTypeMapper.xml]
+### The error may involve org.kevin.demo0212.mapper.ArticleTypeMapper.selectByExample
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2020-08-28 21:12:56,208 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
+2020-08-28 21:12:56,219 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-28 21:12:56,221 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'initializeProject' defined in file [/Users/xiaoxiang/IdeaProjects/demo0212/target/classes/org/kevin/demo0212/config/InitializeProject.class]: Invocation of init method failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+### The error may exist in file [/Users/xiaoxiang/IdeaProjects/demo0212/target/classes/mapper/ArticleTypeMapper.xml]
+### The error may involve org.kevin.demo0212.mapper.ArticleTypeMapper.selectByExample
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.kevin.demo0212.Demo0212Application.main(Demo0212Application.java:13)
+Caused by: org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+### The error may exist in file [/Users/xiaoxiang/IdeaProjects/demo0212/target/classes/mapper/ArticleTypeMapper.xml]
+### The error may involve org.kevin.demo0212.mapper.ArticleTypeMapper.selectByExample
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy83.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93)
+	at com.sun.proxy.$Proxy84.selectByExample(Unknown Source)
+	at org.kevin.demo0212.service.impl.ArticleTypeServiceImpl.findList(ArticleTypeServiceImpl.java:24)
+	at org.kevin.demo0212.config.InitializeProject.afterPropertiesSet(InitializeProject.java:41)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 16 common frames omitted
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+### The error may exist in file [/Users/xiaoxiang/IdeaProjects/demo0212/target/classes/mapper/ArticleTypeMapper.xml]
+### The error may involve org.kevin.demo0212.mapper.ArticleTypeMapper.selectByExample
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:149)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 26 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	... 32 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.setTransactionIsolation(ConnectionImpl.java:2279)
+	at com.zaxxer.hikari.pool.PoolBase.setupConnection(PoolBase.java:409)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:554)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	... 42 common frames omitted
+Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1259)
+	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:575)
+	at com.mysql.cj.jdbc.ConnectionImpl.setTransactionIsolation(ConnectionImpl.java:2226)
+	... 52 common frames omitted
+2020-08-28 21:13:16,341 INFO org.springframework.boot.StartupInfoLogger [main] Starting Demo0212Application on kevinzdeMacBook-Pro.local with PID 47140 (/Users/xiaoxiang/IdeaProjects/demo0212/target/classes started by xiaoxiang in /Users/xiaoxiang/IdeaProjects/demo0212)
+2020-08-28 21:13:16,346 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-08-28 21:13:17,680 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-28 21:13:17,694 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-08-28 21:13:17,780 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [main] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-08-28 21:13:17,781 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 68ms. Found 0 JDBC repository interfaces.
+2020-08-28 21:13:17,816 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-28 21:13:17,817 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-08-28 21:13:18,095 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 277ms. Found 1 MongoDB repository interfaces.
+2020-08-28 21:13:18,121 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-28 21:13:18,122 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-08-28 21:13:18,145 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-28 21:13:18,145 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020-08-28 21:13:18,922 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-28 21:13:19,502 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-08-28 21:13:19,516 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-28 21:13:19,518 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-08-28 21:13:19,518 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-08-28 21:13:19,605 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-08-28 21:13:19,606 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3068 ms
+2020-08-28 21:13:21,293 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-08-28 21:13:21,542 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-08-28 21:13:21,553 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, value, note, delete_flag, create_time from article_type 
+2020-08-28 21:13:21,585 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 
+2020-08-28 21:13:21,643 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 4
+2020-08-28 21:13:21,668 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-08-28 21:13:21,669 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 1(Integer)
+2020-08-28 21:13:21,673 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2020-08-28 21:13:21,674 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-08-28 21:13:21,675 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 2(Integer)
+2020-08-28 21:13:21,676 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2020-08-28 21:13:21,678 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-08-28 21:13:21,678 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 3(Integer)
+2020-08-28 21:13:21,680 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2020-08-28 21:13:21,994 INFO io.lettuce.core.EpollProvider [main] Starting without optional epoll library
+2020-08-28 21:13:21,997 INFO io.lettuce.core.KqueueProvider [main] Starting without optional kqueue library
+2020-08-28 21:13:23,009 INFO com.mongodb.diagnostics.logging.SLF4JLogger [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-08-28 21:13:23,288 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f4902f2fecdce44ae279235', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:5}] to localhost:27017
+2020-08-28 21:13:23,295 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f4902f2fecdce44ae279235', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 3]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4709141}
+2020-08-28 21:13:23,831 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7fd4b9ec, org.springframework.security.web.context.SecurityContextPersistenceFilter@13866865, org.springframework.security.web.header.HeaderWriterFilter@20a25f66, org.springframework.security.web.authentication.logout.LogoutFilter@361d8567, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7f9e6167, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@550574cb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1831447c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10553a61, org.springframework.security.web.session.SessionManagementFilter@27575bcd, org.springframework.security.web.access.ExceptionTranslationFilter@7872e91f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7910e307]
+2020-08-28 21:13:24,006 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-28 21:13:24,136 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-08-28 21:13:24,463 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-28 21:13:24,488 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-28 21:13:24,491 INFO org.springframework.boot.StartupInfoLogger [main] Started Demo0212Application in 8.831 seconds (JVM running for 10.204)
+2020-08-28 21:13:43,670 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-28 21:13:43,671 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-28 21:13:43,681 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 10 ms
+2020-08-28 21:13:43,756 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select id, title, media_url, article_type, note, delete_flag, create_time, update_time , foreword, content from article order by create_time DESC 
+2020-08-28 21:13:43,757 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2020-08-28 21:13:56,946 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==>  Preparing: select id, username, password, create_time, status from blog_user WHERE ( username = ? ) 
+2020-08-28 21:13:56,947 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==> Parameters: kevin(String)
+2020-08-28 21:13:56,950 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] <==      Total: 1
+2020-08-28 21:13:57,053 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-08-28 21:13:57,054 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==> Parameters: 
+2020-08-28 21:13:57,076 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==>  Preparing: select count(*) from secret_moment 
+2020-08-28 21:13:57,077 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==> Parameters: 
+2020-08-28 21:13:57,080 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] <==      Total: 1
+2020-08-28 21:15:24,440 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] ==>  Preparing: select id, title, media_url, article_type, note, delete_flag, create_time, update_time , foreword, content from article order by create_time DESC 
+2020-08-28 21:15:24,441 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] ==> Parameters: 
+2020-08-28 21:15:28,646 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] ==>  Preparing: select id, type, value, note, delete_flag, create_time from article_type 
+2020-08-28 21:15:28,647 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] ==> Parameters: 
+2020-08-28 21:15:28,649 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] <==      Total: 4
+2020-08-28 21:15:28,650 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] ==>  Preparing: select id, title, media_url, article_type, note, delete_flag, create_time, update_time , foreword, content from article where id = ? 
+2020-08-28 21:15:28,651 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] ==> Parameters: a2556d081a6d4824b76883dbb423117a(String)
+2020-08-28 21:15:28,653 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] <==      Total: 1
+2020-08-28 21:15:28,654 INFO org.kevin.demo0212.config.aop.AopLogAspect [http-nio-8080-exec-6] this is the @aopLogCut. and the execution time is:9
+2020-08-28 21:15:28,656 INFO org.kevin.demo0212.config.aop.AopLogAspect [http-nio-8080-exec-6] aop value:Test Annotation AOP of Spring
+2020-08-28 21:15:33,300 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==>  Preparing: select id, title, media_url, article_type, note, delete_flag, create_time, update_time , foreword, content from article order by create_time DESC 
+2020-08-28 21:15:33,301 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==> Parameters: 
+2020-08-28 21:15:41,381 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] ==>  Preparing: select id, title, media_url, article_type, note, delete_flag, create_time, update_time , foreword, content from article WHERE ( article_type = ? ) order by create_time DESC 
+2020-08-28 21:15:41,382 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] ==> Parameters: 0(Integer)
+2020-08-28 21:15:41,388 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] ==>  Preparing: select count(*) from article WHERE ( article_type = ? ) 
+2020-08-28 21:15:41,389 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] ==> Parameters: 0(Integer)
+2020-08-28 21:15:41,390 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] <==      Total: 1
+2020-08-28 21:15:53,012 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==>  Preparing: select id, type, value, note, delete_flag, create_time from article_type 
+2020-08-28 21:15:53,013 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==> Parameters: 
+2020-08-28 21:15:53,015 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] <==      Total: 4
+2020-08-28 21:15:53,016 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==>  Preparing: select id, title, media_url, article_type, note, delete_flag, create_time, update_time , foreword, content from article where id = ? 
+2020-08-28 21:15:53,018 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==> Parameters: 4d3edd7ca8104600b52631131bbfb6cc(String)
+2020-08-28 21:15:53,021 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] <==      Total: 1
+2020-08-28 21:15:53,025 INFO org.kevin.demo0212.config.aop.AopLogAspect [http-nio-8080-exec-10] this is the @aopLogCut. and the execution time is:14
+2020-08-28 21:15:53,026 INFO org.kevin.demo0212.config.aop.AopLogAspect [http-nio-8080-exec-10] aop value:Test Annotation AOP of Spring
+2020-08-28 23:02:52,855 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m29s393ms).

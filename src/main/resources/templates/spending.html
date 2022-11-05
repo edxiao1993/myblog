@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../static/assets/icon/favicon.ico" th:href="@{assets/icon/hp.ico}">
+
+  <title>Kevin's blog</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../static/assets/css/bootstrap.min.css" th:href="@{assets/css/bootstrap.min.css}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../static/assets/css/blog.css" th:href="@{assets/css/blog.css}" rel="stylesheet">
+  <link href="../static/assets/css/myCSS.css" th:href="@{assets/css/myCSS.css}" rel="stylesheet"/>
+  <link href="../static/assets/css/datatables.min.css" th:href="@{assets/css/datatables.min.css}" rel="stylesheet"/>
+  <link href="../static/assets/css/bootstrap-datepicker.css" th:href="@{assets/css/bootstrap-datepicker.css}" rel="stylesheet"/>
+
+  <style>
+    .padding10{
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <header th:replace="~{fragments :: header}"></header>
+  <div th:replace="~{fragments :: financialManagementPanel}"></div>
+</div>
+
+<main role="main" class="container">
+  <div class="modal-header">
+    <h1>Financial Management</h1>
+    <button type="button" class="btn btn-light float-right" data-toggle="modal" data-target="#addSpending">
+      spend
+    </button>
+  </div>
+  <form class="form-inline" id="sumForm">
+    <div class="form-group padding10">
+      <label for="fromDate">fromDate:</label>
+      <input name="fromDate" type="text" class="form-control" id="fromDate" placeholder="from date"
+             readonly="readonly" required/>
+    </div>
+    <div class="form-group padding10">
+      <label for="toDate">toDate:</label>
+      <input name="fromDate" type="text" class="form-control" id="toDate" placeholder="to date"
+             readonly="readonly" required/>
+    </div>
+    <select class="form-control padding10" id="searchType">
+      <option value="">ALL</option>
+      <option value="Eating&Drinking">Eating&Drinking</option>
+      <option value="Clothing">Clothing</option>
+      <option value="Traffic">Traffic</option>
+      <option value="Social">Social</option>
+      <option value="Whatever">Whatever</option>
+    </select>
+    <button type="submit" class="btn btn-info" style="margin-left:10px;">sum</button>
+  </form>
+
+  <table id="spendingTable" class="display table mb-0" style="width:100%">
+    <thead>
+      <tr>
+        <th>COST</th>
+        <th>FOR_WHAT</th>
+        <th>TYPE</th>
+        <th>TIME</th>
+      </tr>
+    </thead>
+  </table>
+
+</main>
+
+<div class="modal fade" id="sumModal" tabindex="-1" role="dialog" aria-labelledby="sumModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">What I have been cost...</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="sumBody">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="addSpending" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form id="spendingForm" class="form-inline">
+          <input type="text" class="form-control col-5" id="cost" placeholder="cost"/>
+          &nbsp;
+          <select class="custom-control-inline btn-light col-4" id="spendingType" name="type">
+            <option value="Eating&Drinking">Eating&Drinking</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Traffic">Traffic</option>
+            <option value="Social">Social</option>
+            <option value="Whatever">Whatever</option>
+          </select>
+          <textarea class="form-control col-10" id="forWhat" rows="3"></textarea>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="btnCancel">Close</button>
+        <button type="button" class="btn btn-primary" id="btnSave">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!--<script src="../static/assets/plugins/jquery-3.3.1.min.js" th:src="@{assets/plugins/jquery-3.3.1.min.js}"></script>-->
+<script src="../static/assets/js/jquery-3.3.1.js" th:src="@{assets/js/jquery-3.3.1.js}"></script>
+
+<script src="../static/assets/js/vendor/popper.min.js" th:src="@{assets/js/vendor/popper.min.js}"></script>
+<script src="../static/assets/js/bootstrap.min.js" th:src="@{assets/js/bootstrap.min.js}"></script>
+<script src="../static/assets/js/vendor/holder.min.js" th:src="@{assets/js/vendor/holder.min.js}"></script>
+<script src="../static/assets/js/myJS.js" th:src="@{assets/js/myJS.js}"></script>
+<script src="../static/assets/plugins/datatables.min.js" th:src="@{assets/plugins/datatables.min.js}"></script>
+<script src="../static/assets/plugins/bootstrap-datepicker.js" th:src="@{assets/plugins/bootstrap-datepicker.js}"></script>
+<script>
+  $(function () {
+    $("#spendingTable").DataTable({
+      processing: false,
+      serverSide: true,
+      lengthChange: false,
+      pageLength: 13,
+      ordering: false,
+      paging: true,
+      pagingType: "first_last_numbers",
+      searching: false,
+      stateSave: false,
+      autoWidth: true,
+      ajax: {
+        url: "/spending/list",
+        type: 'post'
+      },
+      columns: [
+        {
+          data: "cost",
+          render: function(data){
+            return "¥"+data;
+          }
+        },
+        {data: "forWhat"},
+        {data: "type"},
+        {
+          // data:"createTime"
+          "data":"createTime",
+          render: function (data) {
+            let recordTime = new Date(data);
+            return recordTime.getFullYear() + "-" + (recordTime.getMonth() + 1) + "-" + recordTime.getDate();
+          }
+        }
+      ]
+    });
+  });
+
+  $("#btnCancel").on('click', function () {
+    $("#spendingForm")[0].reset();
+  });
+
+  $("#btnSave").on('click', function () {
+    $.ajax({
+      url: "/saveSpending",
+      type: "post",
+      data: {
+        cost: $("#cost").val(),
+        forWhat: $("#forWhat").val(),
+        type: $("#spendingType").val()
+      },
+      success: function (data) {
+        if (data == '1')
+          location.reload();
+      },
+      error: function (data) {
+        console.log("got wrong.");
+      }
+    });
+  });
+
+  $('#fromDate').datepicker({
+    "autoclose":true,
+    "format":"yyyy-mm-dd",
+    "endDate":new Date()
+  });
+
+  $('#toDate').datepicker({
+    "autoclose":true,
+    "format":"yyyy-mm-dd",
+    "endDate":new Date()
+  });
+
+  $("#sumForm").submit(function(){
+    let fromDate = $("#fromDate").val();
+    let toDate = $("#toDate").val();
+    let type = $("#searchType").val();
+    if(fromDate == '' || toDate == ''){
+      alert("please fill the input");
+      return false;
+    }
+    $.ajax({
+      url: "/spending/sum",
+      type: "POST",
+      data:{
+        fromDate: fromDate,
+        toDate: toDate,
+        type: type
+      },
+      success: function(data){
+        $("#sumBody").text(data);
+        $("#sumModal").modal('show');
+      },
+      error: function(){
+        alert("Got Wrong!");
+      }
+    });
+    return false;
+  });
+</script>
+</body>
+</html>

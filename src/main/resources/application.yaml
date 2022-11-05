@@ -1,0 +1,72 @@
+server:
+  servlet:
+    session:
+      timeout: 180m #1.5h
+
+debug: true
+spring:
+  devtools:
+    restart:
+      enabled: true
+  datasource:
+#    url: jdbc:mysql://localhost:3306/myblog?serverTimezone=GMT%2B8
+#    username: root
+#    password: MyPwd1213
+#    url: jdbc:mysql://localhost:3306/myblog?serverTimezone=GMT%2B8
+#    username: root
+#    password: root
+
+### aliyun:
+    hikari:
+    # https://github:com/brettwooldridge/HikariCP#popular-datasource-class-names:
+      connection-timeout: 200000  # is the maximum number of milliseconds that a client will wait for a connection from connection pool.
+      minimum-idle: 5  # is the minimum number of idle connections that is maintained by HikariCP in connection pool.
+      maximum-pool-size: 10  # configures the maximum pool size.
+      idle-timeout: 300000  # is the maximum amount of time in milliseconds that a connection is allowed to sit idle in connection pool.
+      max-lifetime: 1200000  # is the maximum life time in milliseconds of a connection in pool after it is closed.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    database: 0 #default
+    host: 47.119.128.80 #default
+    password: myRedis
+    port: 6379 #default
+    lettuce:
+      pool:
+        max-active: 4 #default 8
+        max-idle: 2 #default 8
+        max-wait: 10000ms #default value is -1ms
+        min-idle: 0 #default
+  data:
+    mongodb:
+      uri: "mongodb://localhost:27017/myblogs"
+
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/ # this is the default path
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 32MB
+      max-request-size: 128MB
+
+    # 解决URL附带 jsessionid 的问题。03-20
+    session:
+      tracking-modes: cookie
+      cookie:
+        http-only: true
+
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: org.kevin.demo0212.model
+
+#
+#  scripting-language-driver: # mybatis 还有 thymeleaf 的整合包，记录一下
+#    thymeleaf:
+
+logging:
+  config: classpath:logback.xml
+
+myblog:
+  config:
+    imgPath: /root/uploadPic/

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../static/assets/icon/favicon.ico" th:href="@{assets/icon/hp.ico}">
+
+  <title>Kevin's blog</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../static/assets/css/bootstrap.min.css" th:href="@{assets/css/bootstrap.min.css}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <link href="../static/assets/css/blog.css" th:href="@{assets/css/blog.css}" rel="stylesheet">
+  <link href="../static/assets/css/myCSS.css" th:href="@{assets/css/myCSS.css}" rel="stylesheet"/>
+  <link href="../static/assets/css/album.css" th:href="@{assets/css/album.css}" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+  <header th:replace="~{fragments :: header}"></header>
+</div>
+
+<main role="main">
+  <div class="album">
+    <div class="container">
+      <div class="modal-header">
+        <h1>Moment</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12" th:each="moment: ${moments}">
+          <div class="mb-12 shadow-sm">
+            <div class="card-body">
+              <p class="card-text" th:text="${moment.statement}">picture statement.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted" th:text="${moment.createTime}">Create Time</small>
+              </div>
+            </div>
+            <img class="card-img-top col-4" th:each="pic:${moment.pictures}"
+                 th:src="@{'/getPicture?src=' + ${pic.src}}" alt="Card image cap"/>
+          </div>
+        </div>
+      </div>
+      <hr/>
+
+      <nav class="blog-pagination">
+        <a class="btn btn-outline-secondary disabled" th:unless="${pageModel.hasPrevious}" href="javascript:void(0);">PreviousPage</a>
+        <a class="btn btn-outline-primary" th:if="${pageModel.hasPrevious}" href="prePage"
+           th:href="@{'/moment?previousTime=' + ${pageModel.beginTime}}">PreviousPage</a>
+        <a class="btn btn-outline-secondary disabled" th:unless="${pageModel.hasNext}" href="javascript:void(0);">NextPage</a>
+        <a class="btn btn-outline-primary" th:if="${pageModel.hasNext}" href="nexPage"
+           th:href="@{'/moment?nextTime=' + ${pageModel.endTime}}">NextPage</a>
+      </nav>
+
+      <div class="row">
+        <div class="col-md-8">
+          <textarea class="form-control custom-control-inline" id="statement" rows="3"
+                    placeholder="What do you wanna remember?"></textarea>
+          <input type="file" class="form-control-file custom-control-inline col-md-4" id="src" multiple="multiple"
+                 accept="image/*" onchange="reads(this)" name="srcImg" style="display: none"/>
+          <input type="button" class="btn btn-info" value="pics" onclick="document.getElementById('src').click()" />
+        </div>
+        <div class="col-md-12" id="toShowImgs">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="btnSave">Save</button>
+      </div>
+    </div>
+  </div>
+
+</main>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../static/assets/js/jquery-3.3.1.min.js" th:src="@{assets/js/jquery-3.3.1.min.js}"></script>
+<script src="../static/assets/js/vendor/popper.min.js" th:src="@{assets/js/vendor/popper.min.js}"></script>
+<script src="../static/assets/js/bootstrap.min.js" th:src="@{assets/js/bootstrap.min.js}"></script>
+<script src="../static/assets/js/vendor/holder.min.js" th:src="@{assets/js/vendor/holder.min.js}"></script>
+<script src="../static/assets/js/myJS.js" th:src="@{assets/js/myJS.js}"></script>
+<script>
+  Holder.addTheme('thumb', {
+    bg: '#55595c',
+    fg: '#eceeef',
+    text: 'Thumbnail'
+  });
+
+  $("#btnCancel").on('click', function () {
+    $("#src").val("");
+    $("#picType").val("");
+    $("#statement").val("");
+  });
+  $("#btnSave").on('click', function () {
+    let formData = new FormData();
+    formData.append("picType", $("#picType").val());
+    formData.append("statement", $("#statement").val());
+
+    for(let i=0; i<$('#src')[0].files.length;i++){
+      formData.append('file[]', $('#src')[0].files[i]);
+    }
+
+    $.ajax({
+      url: "/saveMoment",
+      type: "post",
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function (data) {
+        if (data > 0)
+          location.reload();
+        else {
+          alert("something wrong~");
+          location.reload();
+        }
+      },
+      error: function (data) {
+        alert("上传出错....");
+        console.log("got wrong.");
+      }
+    });
+  });
+
+  function reads(obj) {
+    let imgsDiv = $("#toShowImgs");
+
+    for (let i = 0; i < obj.files.length; i++) {
+      let tmpFile = obj.files[i];
+      let reader = new FileReader();
+      reader.readAsDataURL(tmpFile);
+      reader.onload = function (ev) {
+        let tmpImg = $("<img width='30%' class='m-1' />");
+        tmpImg.attr("src", ev.target.result);
+        imgsDiv.append(tmpImg);
+      }
+    }
+  }
+</script>
+</body>
+</html>

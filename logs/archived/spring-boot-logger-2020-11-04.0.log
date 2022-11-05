@@ -1,0 +1,548 @@
+2020-11-04 00:12:07,019 INFO org.springframework.boot.StartupInfoLogger [main] Starting Demo0212Application on kevinzdeMacBook-Pro.local with PID 66326 (/Users/xiaoxiang/IdeaProjects/demo0212/target/classes started by xiaoxiang in /Users/xiaoxiang/IdeaProjects/demo0212)
+2020-11-04 00:12:07,054 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-11-04 00:12:08,295 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:12:08,299 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-04 00:12:08,375 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [main] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-04 00:12:08,376 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 61ms. Found 0 JDBC repository interfaces.
+2020-11-04 00:12:08,436 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:12:08,436 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-04 00:12:08,673 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 236ms. Found 1 MongoDB repository interfaces.
+2020-11-04 00:12:08,695 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:12:08,697 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-04 00:12:08,728 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-11-04 00:12:08,728 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020-11-04 00:12:09,459 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-04 00:12:10,020 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-11-04 00:12:10,034 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-04 00:12:10,035 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-11-04 00:12:10,036 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-11-04 00:12:10,138 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-11-04 00:12:10,138 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2981 ms
+2020-11-04 00:12:11,488 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-11-04 00:12:11,742 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-11-04 00:12:11,753 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, value, note, delete_flag, create_time from article_type 
+2020-11-04 00:12:11,788 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 
+2020-11-04 00:12:11,848 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 4
+2020-11-04 00:12:11,874 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:12:11,876 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 1(Integer)
+2020-11-04 00:12:11,881 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2020-11-04 00:12:11,883 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:12:11,884 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 2(Integer)
+2020-11-04 00:12:11,889 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2020-11-04 00:12:11,891 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:12:11,892 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 3(Integer)
+2020-11-04 00:12:11,896 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2020-11-04 00:12:12,221 INFO io.lettuce.core.EpollProvider [main] Starting without optional epoll library
+2020-11-04 00:12:12,224 INFO io.lettuce.core.KqueueProvider [main] Starting without optional kqueue library
+2020-11-04 00:12:13,233 INFO com.mongodb.diagnostics.logging.SLF4JLogger [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-11-04 00:12:13,376 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5fa1815d7e8f4d28b37bba54', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:2}] to localhost:27017
+2020-11-04 00:12:13,394 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5fa1815d7e8f4d28b37bba54', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 3]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=13201925}
+2020-11-04 00:12:14,331 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46a0ef6f, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d2be319, org.springframework.security.web.header.HeaderWriterFilter@11577ab8, org.springframework.security.web.authentication.logout.LogoutFilter@5c1687d1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2ae08750, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2dfd157b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ca7619f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6afced93, org.springframework.security.web.session.SessionManagementFilter@5759edff, org.springframework.security.web.access.ExceptionTranslationFilter@29d563bd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3ee200ae]
+2020-11-04 00:12:14,659 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-04 00:12:14,894 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-11-04 00:12:15,264 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-11-04 00:12:15,289 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-04 00:12:15,292 INFO org.springframework.boot.StartupInfoLogger [main] Started Demo0212Application in 9.045 seconds (JVM running for 10.371)
+2020-11-04 00:12:19,674 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-04 00:12:19,675 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-11-04 00:12:19,684 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 9 ms
+2020-11-04 00:12:19,748 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select id, title, media_url, article_type, note, delete_flag, create_time, update_time , foreword, content from article order by create_time DESC 
+2020-11-04 00:12:19,749 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2020-11-04 00:12:25,435 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==>  Preparing: select id, username, password, create_time, status from blog_user WHERE ( username = ? ) 
+2020-11-04 00:12:25,435 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==> Parameters: kevin(String)
+2020-11-04 00:12:25,437 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] <==      Total: 1
+2020-11-04 00:12:25,538 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:12:25,538 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==> Parameters: 
+2020-11-04 00:12:25,547 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:12:25,548 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==> Parameters: 
+2020-11-04 00:12:25,551 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] <==      Total: 1
+2020-11-04 00:12:34,415 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:12:34,419 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] ==> Parameters: b9d299f221c94dd8b14b7c25c1a93f59(String), 2020-11-04T00:12:34.415(LocalDateTime), helosakdjhasdf(String)
+2020-11-04 00:12:34,436 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] <==    Updates: 1
+2020-11-04 00:12:34,562 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:12:34,563 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2020-11-04 00:12:34,570 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:12:34,570 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2020-11-04 00:12:34,571 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] <==      Total: 1
+2020-11-04 00:16:47,811 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-04 00:16:47,950 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-11-04 00:16:47,955 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-11-04 00:17:25,103 INFO org.springframework.boot.StartupInfoLogger [main] Starting Demo0212Application on kevinzdeMacBook-Pro.local with PID 66369 (/Users/xiaoxiang/IdeaProjects/demo0212/target/classes started by xiaoxiang in /Users/xiaoxiang/IdeaProjects/demo0212)
+2020-11-04 00:17:25,107 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-11-04 00:17:26,189 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:17:26,191 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-04 00:17:26,310 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [main] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-04 00:17:26,314 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 111ms. Found 0 JDBC repository interfaces.
+2020-11-04 00:17:26,377 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:17:26,377 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-04 00:17:26,563 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 185ms. Found 1 MongoDB repository interfaces.
+2020-11-04 00:17:26,580 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:17:26,582 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-04 00:17:26,599 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-11-04 00:17:26,599 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2020-11-04 00:17:27,288 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-04 00:17:28,087 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-11-04 00:17:28,101 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-04 00:17:28,102 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-11-04 00:17:28,103 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-11-04 00:17:28,189 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-11-04 00:17:28,189 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2973 ms
+2020-11-04 00:17:29,241 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-11-04 00:17:29,493 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-11-04 00:17:29,502 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, value, note, delete_flag, create_time from article_type 
+2020-11-04 00:17:29,535 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 
+2020-11-04 00:17:29,581 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 4
+2020-11-04 00:17:29,611 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:17:29,612 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 1(Integer)
+2020-11-04 00:17:29,614 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2020-11-04 00:17:29,615 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:17:29,616 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 2(Integer)
+2020-11-04 00:17:29,618 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2020-11-04 00:17:29,619 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:17:29,619 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 3(Integer)
+2020-11-04 00:17:29,621 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2020-11-04 00:17:29,926 INFO io.lettuce.core.EpollProvider [main] Starting without optional epoll library
+2020-11-04 00:17:29,928 INFO io.lettuce.core.KqueueProvider [main] Starting without optional kqueue library
+2020-11-04 00:17:30,904 INFO com.mongodb.diagnostics.logging.SLF4JLogger [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-11-04 00:17:31,008 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5fa1829a425c590fe56bac1c', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:3}] to localhost:27017
+2020-11-04 00:17:31,014 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5fa1829a425c590fe56bac1c', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 3]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3347350}
+2020-11-04 00:17:31,628 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15651402, org.springframework.security.web.context.SecurityContextPersistenceFilter@53f94afe, org.springframework.security.web.header.HeaderWriterFilter@46507dda, org.springframework.security.web.authentication.logout.LogoutFilter@7e9ed4df, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@63e0057a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d4e424e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a53ac0c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c194652, org.springframework.security.web.session.SessionManagementFilter@66f5770e, org.springframework.security.web.access.ExceptionTranslationFilter@1885905b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@582b14e2]
+2020-11-04 00:17:31,806 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-04 00:17:31,927 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-11-04 00:17:32,220 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-11-04 00:17:32,240 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-04 00:17:32,243 INFO org.springframework.boot.StartupInfoLogger [main] Started Demo0212Application in 7.779 seconds (JVM running for 8.698)
+2020-11-04 00:18:00,947 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-04 00:18:00,948 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-11-04 00:18:00,963 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 15 ms
+2020-11-04 00:18:04,356 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==>  Preparing: select id, username, password, create_time, status from blog_user WHERE ( username = ? ) 
+2020-11-04 00:18:04,357 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==> Parameters: kevin(String)
+2020-11-04 00:18:04,359 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] <==      Total: 1
+2020-11-04 00:18:04,452 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:18:04,453 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==> Parameters: 
+2020-11-04 00:18:04,459 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:18:04,460 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==> Parameters: 
+2020-11-04 00:18:04,461 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] <==      Total: 1
+2020-11-04 00:18:15,189 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:18:15,192 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] ==> Parameters: 1c0e4c9a97f542858f5b43847e74c218(String), 2020-11-04T00:18:15.188(LocalDateTime), hello world~(String)
+2020-11-04 00:18:15,200 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] <==    Updates: 1
+2020-11-04 00:18:15,307 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:18:15,308 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2020-11-04 00:18:15,316 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:18:15,316 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2020-11-04 00:18:15,318 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] <==      Total: 1
+2020-11-04 00:18:31,256 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:18:31,257 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==> Parameters: 
+2020-11-04 00:18:31,261 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:18:31,262 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==> Parameters: 
+2020-11-04 00:18:31,264 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] <==      Total: 1
+2020-11-04 00:18:40,476 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:18:40,478 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==> Parameters: 42e96afe06444ac6a826516094601b55(String), 2020-11-04T00:18:40.475(LocalDateTime), 2(String)
+2020-11-04 00:18:40,486 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] <==    Updates: 1
+2020-11-04 00:18:40,551 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:18:40,552 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==> Parameters: 
+2020-11-04 00:18:40,557 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:18:40,558 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==> Parameters: 
+2020-11-04 00:18:40,560 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] <==      Total: 1
+2020-11-04 00:18:44,640 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:18:44,641 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] ==> Parameters: 
+2020-11-04 00:18:44,647 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:18:44,648 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] ==> Parameters: 
+2020-11-04 00:18:44,650 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] <==      Total: 1
+2020-11-04 00:18:54,095 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:18:54,096 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==> Parameters: 46f3f9d36b3149c984a23c7ffefd0b62(String), 2020-11-04T00:18:54.094(LocalDateTime), 122(String)
+2020-11-04 00:18:54,104 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] <==    Updates: 1
+2020-11-04 00:18:54,158 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:18:54,158 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==> Parameters: 
+2020-11-04 00:18:54,166 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:18:54,167 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==> Parameters: 
+2020-11-04 00:18:54,168 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] <==      Total: 1
+2020-11-04 00:19:23,676 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:19:23,677 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==> Parameters: 
+2020-11-04 00:19:23,681 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:19:23,682 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==> Parameters: 
+2020-11-04 00:19:23,683 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] <==      Total: 1
+2020-11-04 00:19:31,433 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:19:31,434 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 7a4e25015b744de8a6b6268469194955(String), 2020-11-04T00:19:31.432(LocalDateTime), 3(String)
+2020-11-04 00:19:31,443 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] <==    Updates: 1
+2020-11-04 00:19:31,493 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:19:31,494 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==> Parameters: 
+2020-11-04 00:19:31,499 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:19:31,500 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==> Parameters: 
+2020-11-04 00:19:31,501 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] <==      Total: 1
+2020-11-04 00:20:44,330 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:20:44,331 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] ==> Parameters: a93145b2ddd8427ab973d421d0f488b6(String), 2020-11-04T00:20:44.329(LocalDateTime), ffadfs(String)
+2020-11-04 00:20:44,338 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] <==    Updates: 1
+2020-11-04 00:20:44,381 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:20:44,382 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==> Parameters: 
+2020-11-04 00:20:44,386 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:20:44,387 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==> Parameters: 
+2020-11-04 00:20:44,388 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] <==      Total: 1
+2020-11-04 00:21:31,234 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:21:31,235 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2020-11-04 00:21:31,240 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:21:31,240 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2020-11-04 00:21:31,241 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] <==      Total: 1
+2020-11-04 00:21:41,860 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:21:41,861 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==> Parameters: 041431cf58114dbf85564cca52f414cf(String), 2020-11-04T00:21:41.859(LocalDateTime), fdsaccc(String)
+2020-11-04 00:21:41,869 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] <==    Updates: 1
+2020-11-04 00:21:41,914 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:21:41,914 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] ==> Parameters: 
+2020-11-04 00:21:41,920 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:21:41,920 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] ==> Parameters: 
+2020-11-04 00:21:41,922 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] <==      Total: 1
+2020-11-04 00:23:27,476 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:23:27,477 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==> Parameters: 
+2020-11-04 00:23:27,482 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:23:27,483 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==> Parameters: 
+2020-11-04 00:23:27,485 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] <==      Total: 1
+2020-11-04 00:23:35,604 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:23:35,606 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==> Parameters: 738513cd40cb46d88656cc26890a85e3(String), 2020-11-04T00:23:35.603(LocalDateTime), ffs(String)
+2020-11-04 00:23:35,613 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] <==    Updates: 1
+2020-11-04 00:23:35,657 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:23:35,658 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2020-11-04 00:23:35,662 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:23:35,662 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2020-11-04 00:23:35,663 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] <==      Total: 1
+2020-11-04 00:25:13,061 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:25:13,062 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==> Parameters: 4ae3cfc55a5e48ffbe181c7b3434c1cb(String), 2020-11-04T00:25:13.060(LocalDateTime), hellowhord(String)
+2020-11-04 00:25:13,068 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] <==    Updates: 1
+2020-11-04 00:25:13,111 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:25:13,112 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2020-11-04 00:25:13,115 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:25:13,115 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2020-11-04 00:25:13,117 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] <==      Total: 1
+2020-11-04 00:26:33,301 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:26:33,302 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==> Parameters: fb53cbe9234b4d179a336059c763f40f(String), 2020-11-04T00:26:33.301(LocalDateTime), 大声点(String)
+2020-11-04 00:26:33,306 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] <==    Updates: 1
+2020-11-04 00:26:33,399 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:26:33,400 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==> Parameters: 
+2020-11-04 00:26:33,405 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:26:33,405 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==> Parameters: 
+2020-11-04 00:26:33,407 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] <==      Total: 1
+2020-11-04 00:26:44,185 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:26:44,186 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==> Parameters: eb9ead5c1cd548be92f10c91e3f83a52(String), 2020-11-04T00:26:44.184(LocalDateTime), 时代风采(String)
+2020-11-04 00:26:44,193 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] <==    Updates: 1
+2020-11-04 00:26:44,240 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:26:44,240 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] ==> Parameters: 
+2020-11-04 00:26:44,245 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:26:44,246 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] ==> Parameters: 
+2020-11-04 00:26:44,248 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] <==      Total: 1
+2020-11-04 00:27:03,839 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-04 00:27:03,968 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-11-04 00:27:03,973 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-11-04 00:27:09,257 INFO org.springframework.boot.StartupInfoLogger [main] Starting Demo0212Application on kevinzdeMacBook-Pro.local with PID 66423 (/Users/xiaoxiang/IdeaProjects/demo0212/target/classes started by xiaoxiang in /Users/xiaoxiang/IdeaProjects/demo0212)
+2020-11-04 00:27:09,277 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-11-04 00:27:10,456 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:27:10,458 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-04 00:27:10,563 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [main] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-04 00:27:10,564 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 96ms. Found 0 JDBC repository interfaces.
+2020-11-04 00:27:10,630 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:27:10,631 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-04 00:27:10,843 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 211ms. Found 1 MongoDB repository interfaces.
+2020-11-04 00:27:10,861 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:27:10,863 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-04 00:27:10,883 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-11-04 00:27:10,884 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2020-11-04 00:27:11,479 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-04 00:27:12,005 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-11-04 00:27:12,022 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-04 00:27:12,023 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-11-04 00:27:12,024 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-11-04 00:27:12,123 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-11-04 00:27:12,123 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2723 ms
+2020-11-04 00:27:13,415 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-11-04 00:27:13,650 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-11-04 00:27:13,661 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, value, note, delete_flag, create_time from article_type 
+2020-11-04 00:27:13,696 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 
+2020-11-04 00:27:13,735 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 4
+2020-11-04 00:27:13,759 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:27:13,760 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 1(Integer)
+2020-11-04 00:27:13,764 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2020-11-04 00:27:13,766 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:27:13,767 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 2(Integer)
+2020-11-04 00:27:13,769 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2020-11-04 00:27:13,771 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:27:13,772 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 3(Integer)
+2020-11-04 00:27:13,773 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2020-11-04 00:27:14,009 INFO io.lettuce.core.EpollProvider [main] Starting without optional epoll library
+2020-11-04 00:27:14,011 INFO io.lettuce.core.KqueueProvider [main] Starting without optional kqueue library
+2020-11-04 00:27:14,730 INFO com.mongodb.diagnostics.logging.SLF4JLogger [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-11-04 00:27:14,790 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5fa184e2d0d35504efead3c6', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:4}] to localhost:27017
+2020-11-04 00:27:14,796 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5fa184e2d0d35504efead3c6', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 3]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3531198}
+2020-11-04 00:27:15,309 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c14bbab, org.springframework.security.web.context.SecurityContextPersistenceFilter@1361e880, org.springframework.security.web.header.HeaderWriterFilter@2fce8243, org.springframework.security.web.authentication.logout.LogoutFilter@2f82e3cf, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6686507b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4bac0be5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ea1729e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72c5064f, org.springframework.security.web.session.SessionManagementFilter@37393dab, org.springframework.security.web.access.ExceptionTranslationFilter@5036a286, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5e6bbe63]
+2020-11-04 00:27:15,461 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-04 00:27:15,576 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-11-04 00:27:15,866 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-11-04 00:27:15,888 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-04 00:27:15,891 INFO org.springframework.boot.StartupInfoLogger [main] Started Demo0212Application in 7.36 seconds (JVM running for 8.443)
+2020-11-04 00:27:37,281 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-04 00:27:37,282 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-11-04 00:27:37,300 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 18 ms
+2020-11-04 00:27:42,169 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==>  Preparing: select id, username, password, create_time, status from blog_user WHERE ( username = ? ) 
+2020-11-04 00:27:42,170 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==> Parameters: kevin(String)
+2020-11-04 00:27:42,171 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] <==      Total: 1
+2020-11-04 00:27:42,269 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:27:42,269 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==> Parameters: 
+2020-11-04 00:27:42,278 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:27:42,279 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] ==> Parameters: 
+2020-11-04 00:27:42,281 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-10] <==      Total: 1
+2020-11-04 00:28:02,173 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:28:02,175 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==> Parameters: bd7029b0c0cb47678e1bcf6bab102fa4(String), 2020-11-04T00:28:02.172(LocalDateTime), 饭撒钱(String)
+2020-11-04 00:28:02,183 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] <==    Updates: 1
+2020-11-04 00:28:02,239 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:28:02,240 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] ==> Parameters: 
+2020-11-04 00:28:02,247 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:28:02,247 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] ==> Parameters: 
+2020-11-04 00:28:02,249 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-3] <==      Total: 1
+2020-11-04 00:28:23,672 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:28:23,673 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==> Parameters: 4619d821bdf44f18ad35cd59537ffcb4(String), 2020-11-04T00:28:23.672(LocalDateTime), 发大财(String)
+2020-11-04 00:28:23,681 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] <==    Updates: 1
+2020-11-04 00:28:23,734 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:28:23,735 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] ==> Parameters: 
+2020-11-04 00:28:23,741 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:28:23,741 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] ==> Parameters: 
+2020-11-04 00:28:23,743 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] <==      Total: 1
+2020-11-04 00:28:42,957 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:28:42,959 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==> Parameters: 2275902c9be14e1b9f93ab9e742ef790(String), 2020-11-04T00:28:42.957(LocalDateTime), 阿斯顿v啊的(String)
+2020-11-04 00:28:42,965 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] <==    Updates: 1
+2020-11-04 00:28:42,991 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:28:42,993 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2020-11-04 00:28:42,998 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:28:42,999 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2020-11-04 00:28:43,000 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] <==      Total: 1
+2020-11-04 00:31:36,428 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:31:36,429 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] ==> Parameters: 
+2020-11-04 00:31:36,434 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:31:36,434 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] ==> Parameters: 
+2020-11-04 00:31:36,436 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] <==      Total: 1
+2020-11-04 00:32:08,516 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:32:08,517 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==> Parameters: 
+2020-11-04 00:32:08,523 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:32:08,524 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==> Parameters: 
+2020-11-04 00:32:08,526 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] <==      Total: 1
+2020-11-04 00:32:29,135 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:32:29,137 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==> Parameters: ae4abb5110ca46f4873d7f46c0c0dee9(String), 2020-11-04T00:32:29.135(LocalDateTime), wrd(String)
+2020-11-04 00:32:29,140 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] <==    Updates: 1
+2020-11-04 00:32:29,175 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:32:29,176 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==> Parameters: 
+2020-11-04 00:32:29,181 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:32:29,182 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==> Parameters: 
+2020-11-04 00:32:29,184 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] <==      Total: 1
+2020-11-04 00:32:53,213 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:32:53,213 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] ==> Parameters: 
+2020-11-04 00:32:53,219 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:32:53,220 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] ==> Parameters: 
+2020-11-04 00:32:53,221 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-5] <==      Total: 1
+2020-11-04 00:33:14,091 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:33:14,093 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] ==> Parameters: 3711dfbebef848abb38f7e2a44ec3644(String), 2020-11-04T00:33:14.091(LocalDateTime), hll(String)
+2020-11-04 00:33:14,102 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] <==    Updates: 1
+2020-11-04 00:33:14,140 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:33:14,141 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==> Parameters: 
+2020-11-04 00:33:14,147 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:33:14,148 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] ==> Parameters: 
+2020-11-04 00:33:14,149 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-7] <==      Total: 1
+2020-11-04 00:33:16,699 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-04 00:33:16,837 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-11-04 00:33:16,843 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-11-04 00:33:55,188 INFO org.springframework.boot.StartupInfoLogger [main] Starting Demo0212Application on kevinzdeMacBook-Pro.local with PID 66471 (/Users/xiaoxiang/IdeaProjects/demo0212/target/classes started by xiaoxiang in /Users/xiaoxiang/IdeaProjects/demo0212)
+2020-11-04 00:33:55,192 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-11-04 00:33:56,305 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:33:56,309 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-04 00:33:56,432 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [main] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-04 00:33:56,435 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 113ms. Found 0 JDBC repository interfaces.
+2020-11-04 00:33:56,501 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:33:56,502 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-04 00:33:56,738 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 235ms. Found 1 MongoDB repository interfaces.
+2020-11-04 00:33:56,761 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-04 00:33:56,764 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-04 00:33:56,787 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.kevin.demo0212.repository.CustomerRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-11-04 00:33:56,788 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2020-11-04 00:33:57,437 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-04 00:33:58,040 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-11-04 00:33:58,074 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-04 00:33:58,077 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-11-04 00:33:58,078 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-11-04 00:33:58,215 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-11-04 00:33:58,216 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2961 ms
+2020-11-04 00:34:00,127 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-11-04 00:34:07,280 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-11-04 00:34:07,289 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, value, note, delete_flag, create_time from article_type 
+2020-11-04 00:34:07,317 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 
+2020-11-04 00:34:07,610 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 4
+2020-11-04 00:34:07,625 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:34:07,626 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 1(Integer)
+2020-11-04 00:34:07,857 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2020-11-04 00:34:07,859 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:34:07,859 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 2(Integer)
+2020-11-04 00:34:08,095 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2020-11-04 00:34:08,096 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==>  Preparing: select id, type, content, url, create_time, update_time from alert_wall WHERE ( type = ? ) 
+2020-11-04 00:34:08,096 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] ==> Parameters: 3(Integer)
+2020-11-04 00:34:08,320 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [main] <==      Total: 1
+2020-11-04 00:34:08,511 INFO io.lettuce.core.EpollProvider [main] Starting without optional epoll library
+2020-11-04 00:34:08,513 INFO io.lettuce.core.KqueueProvider [main] Starting without optional kqueue library
+2020-11-04 00:34:09,239 INFO com.mongodb.diagnostics.logging.SLF4JLogger [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-11-04 00:34:09,316 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5fa18681b601412acf5a12fc', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:5}] to localhost:27017
+2020-11-04 00:34:09,322 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5fa18681b601412acf5a12fc', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 3]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3873006}
+2020-11-04 00:34:09,829 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44df834c, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b86f4cb, org.springframework.security.web.header.HeaderWriterFilter@11896124, org.springframework.security.web.authentication.logout.LogoutFilter@1a73f3d1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4f0cdd0f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4056cdb2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b5a89d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34c07ecc, org.springframework.security.web.session.SessionManagementFilter@633cad4d, org.springframework.security.web.access.ExceptionTranslationFilter@752ffce3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4feaa4b8]
+2020-11-04 00:34:09,981 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-04 00:34:10,092 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-11-04 00:34:10,417 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-11-04 00:34:10,437 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-04 00:34:10,440 INFO org.springframework.boot.StartupInfoLogger [main] Started Demo0212Application in 15.822 seconds (JVM running for 16.718)
+2020-11-04 00:34:13,710 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-04 00:34:13,711 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-11-04 00:34:13,722 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 11 ms
+2020-11-04 00:34:20,002 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==>  Preparing: select id, username, password, create_time, status from blog_user WHERE ( username = ? ) 
+2020-11-04 00:34:20,003 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==> Parameters: kevin(String)
+2020-11-04 00:34:20,987 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] <==      Total: 1
+2020-11-04 00:34:21,085 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:34:21,086 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==> Parameters: 
+2020-11-04 00:34:25,485 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:34:25,486 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] ==> Parameters: 
+2020-11-04 00:34:26,611 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-9] <==      Total: 1
+2020-11-04 00:34:44,453 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] ==>  Preparing: insert into secret_moment (id, create_time, moment ) values (?, ?, ? ) 
+2020-11-04 00:34:44,456 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] ==> Parameters: ed587870b7174389ab3d69211da5e7d7(String), 2020-11-04T00:34:42.429(LocalDateTime), 增加了一个加载层～～～(String)
+2020-11-04 00:34:44,760 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-6] <==    Updates: 1
+2020-11-04 00:34:44,842 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] ==>  Preparing: select id, create_time , moment from secret_moment order by create_time DESC 
+2020-11-04 00:34:44,843 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] ==> Parameters: 
+2020-11-04 00:34:51,815 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] ==>  Preparing: select count(*) from secret_moment 
+2020-11-04 00:34:51,816 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] ==> Parameters: 
+2020-11-04 00:34:52,908 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] <==      Total: 1
+2020-11-04 00:35:08,239 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==>  Preparing: select id, title, media_url, article_type, note, delete_flag, create_time, update_time , foreword, content from article order by create_time DESC 
+2020-11-04 00:35:08,240 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-8] ==> Parameters: 
+2020-11-04 00:37:12,206 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] ==>  Preparing: select id, type, value, note, delete_flag, create_time from article_type 
+2020-11-04 00:37:12,207 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] ==> Parameters: 
+2020-11-04 00:37:12,517 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-2] <==      Total: 4
+2020-11-04 00:37:29,107 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==>  Preparing: insert into article (id, title, media_url, article_type, note, delete_flag, create_time, update_time, foreword, content) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2020-11-04 00:37:29,108 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] ==> Parameters: 8e16e8f1d54a46a6b69793a5ba363643(String), 测试用(String), null, 0(Integer), null, false(Boolean), 2020-11-04T00:37:28.226(LocalDateTime), 2020-11-04T00:37:28.236(LocalDateTime), 写(String), 文章测试用(String)
+2020-11-04 00:37:29,397 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-4] <==    Updates: 1
+2020-11-04 00:37:29,442 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==>  Preparing: select id, title, media_url, article_type, note, delete_flag, create_time, update_time , foreword, content from article order by create_time DESC 
+2020-11-04 00:37:29,442 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger [http-nio-8080-exec-1] ==> Parameters: 
+2020-11-04 00:37:56,389 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-04 00:37:56,527 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-11-04 00:37:56,534 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-11-04 00:37:56,589 WARN org.springframework.jdbc.support.SQLErrorCodesFactory [http-nio-8080-exec-1] Error while extracting database name - falling back to empty error codes
+org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:345)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:373)
+	at org.springframework.jdbc.support.SQLErrorCodesFactory.getErrorCodes(SQLErrorCodesFactory.java:215)
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.setDataSource(SQLErrorCodeSQLExceptionTranslator.java:137)
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.<init>(SQLErrorCodeSQLExceptionTranslator.java:100)
+	at org.mybatis.spring.MyBatisExceptionTranslator.lambda$new$0(MyBatisExceptionTranslator.java:54)
+	at org.mybatis.spring.MyBatisExceptionTranslator.initExceptionTranslator(MyBatisExceptionTranslator.java:102)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:87)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy83.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:145)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93)
+	at com.sun.proxy.$Proxy110.selectByExampleWithBLOBsWithRowbounds(Unknown Source)
+	at org.kevin.demo0212.service.impl.ArticleServiceImpl.selectByTypes(ArticleServiceImpl.java:51)
+	at org.kevin.demo0212.service.impl.ArticleServiceImpl.findList(ArticleServiceImpl.java:37)
+	at org.kevin.demo0212.service.impl.ArticleServiceImpl.findList(ArticleServiceImpl.java:32)
+	at org.kevin.demo0212.controller.IndexController.index(IndexController.java:50)
+	at org.kevin.demo0212.controller.IndexController$$FastClassBySpringCGLIB$$c1ce290d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at org.kevin.demo0212.controller.IndexController$$EnhancerBySpringCGLIB$$89b46c67.index(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:336)
+	... 111 common frames omitted
+Caused by: java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:96)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	... 112 common frames omitted

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragement="apply_all">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../static/assets/icon/favicon.ico" th:href="@{assets/icon/hp.ico}">
+
+  <title>Kevin's blog</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../static/assets/css/bootstrap.min.css" th:href="@{assets/css/bootstrap.min.css}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../static/assets/css/google-fonts.css" th:href="@{assets/css/google-fonts.css}" rel="stylesheet">
+  <link href="../static/assets/css/blog.css" th:href="@{assets/css/blog.css}" rel="stylesheet">
+</head>
+
+<body>
+<header class="blog-header py-3" th:fragement="header">
+  <div class="row flex-nowrap justify-content-between align-items-center">
+    <div class="col-4 pt-1">
+    </div>
+    <div class="col-4 text-center">
+      <a class="blog-header-logo text-dark" href="/index">@K</a>
+    </div>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+      <a class="text-muted" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3">
+          <circle cx="10.5" cy="10.5" r="7.5"></circle>
+          <line x1="21" y1="21" x2="15.8" y2="15.8"></line>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="nav-scroller py-1 mb-2" th:fragment="index">
+  <nav class="nav d-flex justify-content-between">
+    <a class="p-2 text-info" href="/moment">Moment</a>
+    <a class="p-2 text-danger" href="/secretMoment">SecretMoment</a>
+    <a class="p-2 text-warning" href="/spending">Spending</a>
+    <a class="p-2 text-muted" th:data="${type.value}" th:each="type:${application.articleTypes}" th:text="${type.type}"
+       onclick="selectArticleType(this)" href="#">article type</a>
+  </nav>
+</div>
+
+<div class="jumbotron p-3 p-md-4 text-white rounded bg-info" th:fragment="basicInfoPanel">
+  <div class="col-md-11 px-0">
+    <p class="lead my-3 ownFont font20" th:text="${application.blogWall.content}">alert wall</p>
+    <p class=" mb-0"><a href="#" class="text-white" th:href="${application.blogWall.url}">...</a></p>
+  </div>
+</div>
+
+<div class="jumbotron p-3 p-md-4 text-secondary rounded bg-light" th:fragment="secretMomentInfoPanel">
+  <div class="col-md-11 px-0">
+    <p class="lead my-3 ownFont font20" th:text="${application.secretMomentWall.content}">alert wall</p>
+    <p class=" mb-0"><a href="#" class="text-secondary" th:href="${application.secretMomentWall.url}">...</a></p>
+  </div>
+</div>
+
+<div class="jumbotron p-3 p-md-4 text-secondary rounded bg-light" th:fragment="financialManagementPanel">
+  <div class="col-md-11 px-0">
+    <p class="lead my-3 ownFont font20" th:text="${application.financeWall.content}">alert wall</p>
+    <p class=" mb-0"><a href="#" class="text-secondary" th:href="${application.financeWall.url}">...</a></p>
+  </div>
+</div>
+
+<div class="modal fade" id="signinModal" tabindex="-1" th:fragment="signinModal">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form class="form-signin form-inline">
+          <label for="username" class="col-4">username: </label>
+          <input type="email" id="username" class="form-control col-6" placeholder="" required autofocus>
+          <label for="password" class="col-4">password: </label>
+          <input type="password" id="password" class="form-control col-6" placeholder="" required>
+          <button class="btn btn-primary col-3 float-right" type="button" id="btnLogin">Sign in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="blog-footer" th:fragment="footer">
+  <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a
+      href="https://twitter.com/mdo">@mdo</a>.</p>
+  <p>
+    <a href="/index">Back to Home</a>
+  </p>
+</footer>
+
+</body>
+</html>

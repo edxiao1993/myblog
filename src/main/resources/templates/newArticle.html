@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../static/assets/icon/favicon.ico" th:href="@{assets/icon/hp.ico}">
+
+  <title>Kevin's blog</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../static/assets/css/bootstrap.min.css" th:href="@{assets/css/bootstrap.min.css}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <!--<link href="../static/css/google-fonts.css" th:href="@{css/google-fonts.css}" rel="stylesheet">-->
+  <link href="../static/assets/css/blog.css" th:href="@{assets/css/blog.css}" rel="stylesheet"/>
+  <link href="../static/assets/css/myCSS.css" th:href="@{assets/css/myCSS.css}" rel="stylesheet"/>
+  <script src="../static/assets/plugins/ckeditor.js" th:src="@{assets/plugins/tinymce.min.js}"></script>
+  <script>
+    tinymce.init({
+      selector: '#mytextarea'
+      , branding: false
+      , menubar: false
+      , statusbar: false
+      , toolbar: 'styleselect bold italic |'
+      , toolbar_sticky: true
+
+    });
+  </script>
+</head>
+
+<body th:background="@{assets/image/stars.jpg}" background="../static/assets/image/stars.jpg">
+
+<div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-1">
+        <a class="text-white font-weight-bold" data-toggle="modal" data-target="#warningBack"
+           href="javascript:void(0);">
+          ︎⇇⇇⇇
+        </a>
+      </div>
+      <div class="col-10 text-center">
+        <div class="blog-header-logo text-white ownFont font20" href="#">New Article</div>
+      </div>
+      <div class="col-1"></div>
+    </div>
+  </header>
+
+  <form id="newArticleForm">
+    <div class="form-group">
+      <div class="col-6" style="margin-top: 5px; margin-bottom:10px">
+        <div class="input-group">
+          <input type="text" class="form-control" name="title" placeholder="title" autofocus="autofocus"/>
+          &nbsp;
+          <div class="input-group-append">
+            <select class="custom-control-inline btn-light" id="inlineFormCustomSelect" name="articleType">
+              <option th:each="type:${articleTypes}" th:value="${type.value}"
+                      th:text="${type.type}">Article Type
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-9">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" name="foreword" style="resize: none;"
+                    placeholder="foreword"></textarea>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="form-group">
+<!--          <textarea class="form-control" rows="23" name="content" style="resize: none;"-->
+<!--                    placeholder="content"></textarea>-->
+          <textarea class="form-control" rows="23" id="mytextarea" name="content">
+            Hello World!
+          </textarea>
+        </div>
+      </div>
+
+<!--      <div class="col-12">-->
+<!--        <div class="form-group">-->
+<!--          <textarea name="content" id="editor5" placeholder="type here"></textarea>-->
+<!--        </div>-->
+<!--      </div>-->
+
+      <div class="col-4">
+        <p>
+          <button type="submmit" class="btn btn-lg btn-outline-secondary">done</button>
+        </p>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="modal fade" id="warningBack" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">WARNING</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body ownFont font20">
+        exist without saving?
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-info" href="/index">Exist</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../static/assets/js/jquery-3.3.1.min.js" th:src="@{assets/js/jquery-3.3.1.min.js}"></script>
+<script src="../static/assets/js/vendor/popper.min.js" th:src="@{assets/js/vendor/popper.min.js}"></script>
+<script src="../static/assets/js/bootstrap.min.js" th:src="@{assets/js/bootstrap.min.js}"></script>
+<script src="../static/assets/js/vendor/holder.min.js" th:src="@{assets/js/vendor/holder.min.js}"></script>
+<script src="../static/assets/plugins/layer/layer.js" th:src="@{assets/plugins/layer/layer.js}"></script>
+<script>
+  var myEditor = null;
+  $(function () {
+
+    // ClassicEditor.create(document.querySelector("#editor5")).then(editor => {
+    //   myEditor = editor;
+    // }).catch(error => {
+    //   console.error(error);
+    // });
+
+    $("#newArticleForm").submit(function () {
+      layer.load(
+      2, {
+        time: 5 * 1000
+        ,shade: [0.3, '#000']
+      });
+      // 有可能是在这里出错了，导致存入数据库的数据乱码
+      var formData = $("#newArticleForm").serialize();
+      console.log(formData)
+      $.ajax({
+        url: "/saveArticle",
+        type: "post",
+        data: formData,
+        success: function (data) {
+        layer.closeAll();
+          if (data == 1) {
+            location.href = "/index";
+          }
+        },
+        error: function () {
+          alert("NO!");
+        }
+      });
+
+
+
+      return false;
+    });
+
+    window.addEventListener('popstate',function(){
+      alert("hello world");
+    },false);
+  });
+
+  // function pushHistory(){
+  //   let url = "#";
+  //   let state = {
+  //     title: "title",
+  //     url: "#"
+  //   };
+  //   window.history.pushState(state,"title",url);
+  // }
+
+  // window.onpopstate = function(event) {
+  //   alert("hello world");
+  //   console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+  // };
+
+  // window.on('popstate',function(){
+  //   alert("hw");
+  //   $("#warningBack").modal('show');
+  //   return false;
+  // });
+</script>
+
+<script>
+    Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+    });
+</script>
+</body>
+</html>
