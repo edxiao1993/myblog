@@ -27,8 +27,8 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   redis:
     database: 0 #default
-    host: 47.119.128.80 #default
-    password: myRedis
+    host: default
+    password:
     port: 6379 #default
     lettuce:
       pool:
