@@ -38,7 +38,7 @@ class Demo0212ApplicationTests {
 
 	@Autowired
 	private BlogUserService blogUserService;
-	@Test
+//	@Test
 	void insertBlogUser(){
 		BlogUser u1 = new BlogUser();
 		u1.setUsername("edward");

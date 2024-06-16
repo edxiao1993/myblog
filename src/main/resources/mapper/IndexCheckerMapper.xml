@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kevin.demo0212.mapper.june8_2024.IndexCheckerMapper">
+    <insert id="insertBatchSubscriber">
+        INSERT INTO june_subscriber (
+            msisdn, custid, region, iccid)
+        VALUES
+        <foreach collection="subscriberList" item="subscriber" separator=",">
+            (#{subscriber.msisdn}, #{subscriber.custid}, #{subscriber.region},
+             #{subscriber.iccid})
+        </foreach>
+    </insert>
+    <insert id="insertBatchResource">
+        INSERT INTO june_resource (
+            resid, iccid)
+        VALUES
+        <foreach collection="resourceList" item="resource" separator=",">
+            (#{resource.resid}, #{resource.iccid})
+        </foreach>
+    </insert>
+    <insert id="insertBatchAttr">
+        INSERT INTO june_attr (
+            resid, attrid, attrvalue)
+        VALUES
+        <foreach collection="attrList" item="attr" separator=",">
+            (#{attr.resid}, #{attr.attrid}, #{attr.attrvalue})
+        </foreach>
+    </insert>
+
+    <update id="updateByExampleWithBLOBs">
+        update secret_moment
+        set id = #{record.id,jdbcType=VARCHAR},
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+        moment = #{record.moment,jdbcType=LONGVARCHAR}
+    </update>
+
+    <update id="checkDefaultBehaviour">
+        insert into june_targeter (msisdn, iccid, attrid, attrvalue)
+        SELECT s.msisdn, s.iccid, a.attrid, a.attrvalue
+        FROM june_subscriber s
+            LEFT JOIN june_resource r ON s.iccid = r.iccid
+            LEFT JOIN june_attr a ON a.resid = r.resid
+    </update>
+    <update id="checkInsertIgnoreInto">
+        insert ignore into june_targeter (msisdn, iccid, attrid, attrvalue)
+        SELECT s.msisdn, s.iccid, a.attrid, a.attrvalue
+        FROM june_subscriber s
+        LEFT JOIN june_resource r ON s.iccid = r.iccid
+        LEFT JOIN june_attr a ON a.resid = r.resid
+    </update>
+    <update id="checkDuplicateKey">
+        insert into june_targeter (msisdn, iccid, attrid, attrvalue)
+        (SELECT s.msisdn, s.iccid, a.attrid, a.attrvalue
+        FROM june_subscriber s
+        LEFT JOIN june_resource r ON s.iccid = r.iccid
+        LEFT JOIN june_attr a ON a.resid = r.resid)
+        ON DUPLICATE KEY UPDATE attrvalue = VALUES(attrvalue)
+    </update>
+    <update id="checkReplaceInto">
+        replace into june_targeter (msisdn, iccid, attrid, attrvalue)
+        SELECT s.msisdn, s.iccid, a.attrid, a.attrvalue
+        FROM june_subscriber s
+        LEFT JOIN june_resource r ON s.iccid = r.iccid
+        LEFT JOIN june_attr a ON a.resid = r.resid
+    </update>
+</mapper>

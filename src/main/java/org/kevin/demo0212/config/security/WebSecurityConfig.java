@@ -46,12 +46,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/", "/index").permitAll()
+                .antMatchers("/", "/index", "/selectCursor").permitAll()
                 .antMatchers("/assets/**").permitAll()
                 .antMatchers("/inserts").permitAll()
                 .antMatchers("/updates").permitAll()
                 .antMatchers("/app/**").permitAll() // to test interceptor
                 .antMatchers("/mongodb/**").permitAll() // to test mongoDB
+                .antMatchers("/indexer/**").permitAll() // to test mongoDB
                 .antMatchers("/**").authenticated()
                 .and()
                 .formLogin()
